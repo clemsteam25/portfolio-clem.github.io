@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Clément Verschaeve | BTS SIO SISR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Réinitialisation et style général */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        /* En-tête fixe */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+        .nav-button {
+            padding: 0.6rem 1rem;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        .nav-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        .nav-button.active {
+            background-color: #1a5276;
+        }
+        /* Sections */
+        .section {
+            position: fixed;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 120px);
+            overflow-y: auto;
+            display: none;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .section.active {
+            display: block;
+            opacity: 1;
+        }
+        /* Contenu des sections */
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .section-content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        .section-content h3 {
+            color: #3498db;
+            margin-top: 1.5rem;
+        }
+        /* Icônes et images */
+        .skill-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .section-content img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Listes et liens */
+        .competence-list {
+            margin: 1.5rem 0;
+        }
+        .competence-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .competence-list li:before {
+            content: "\2022";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .section-content a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+        /* Bouton CV */
+        .cv-download {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.7rem 1.5rem;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        .cv-download:hover {
+            background-color: #2980b9;
+        }
+        /* Pied de page */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2c3e50;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+        /* Blockquote pour témoignages */
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #555;
+        }
+        blockquote footer {
+            font-style: normal;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 0.5rem;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-button {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+            }
+            .section-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1><i class="fas fa-user-tie"></i> Clément Verschaeve</h1>
+        <p>Étudiant en BTS SIO option SISR | Futur administrateur de data center</p>
+        <nav>
+            <button class="nav-button active" data-section="accueil"><i class="fas fa-home"></i> Accueil</button>
+            <button class="nav-button" data-section="competence1"><i class="fas fa-server"></i> Patrimoine informatique</button>
+            <button class="nav-button" data-section="competence2"><i class="fas fa-headset"></i> Support utilisateur</button>
+            <button class="nav-button" data-section="competence3"><i class="fas fa-globe"></i> Présence en ligne</button>
+            <button class="nav-button" data-section="competence4"><i class="fas fa-project-diagram"></i> Mode projet</button>
+            <button class="nav-button" data-section="competence5"><i class="fas fa-network-wired"></i> Services informatiques</button>
+            <button class="nav-button" data-section="competence6"><i class="fas fa-chart-line"></i> Développement pro</button>
+            <button class="nav-button" data-section="Tableau"><i class="fas fa-comments"></i> Tableau de compétences</button>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="section active">
+        <div class="section-content">
+            <div style="text-align: center;">
+                <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=Portfolio+Clément+Verschaeve" alt="Bannière portfolio" style="max-width: 100%;">
+            </div>
+                <h2>À propos de moi</h2>
+                    <p>
+                        Je m’appelle <strong>Clément Verschaeve</strong>, étudiant en <strong>BTS SIO première année, option SISR</strong> à l’Institut Limayrac (Toulouse). Passionné par les <strong>infrastructures réseau, l’administration système et la gestion de data center</strong>, je me spécialise dans l’optimisation et la maintenance des systèmes informatiques. Mon objectif professionnel est de devenir <strong>administrateur de data center</strong>, en développant mes compétences techniques et organisationnelles.
+                    </p>
+
+                    <h3>Mon parcours académique</h3>
+                        <p>
+                            Titulaire d’un <strong>BAC Professionnel Réseaux Informatique et Système Communiquant</strong> (obtenu en 2023), j’ai acquis des bases solides en :
+                        </p>
+                        <ul class="competence-list">
+                            <li>Configuration de serveurs (Windows Server, Linux).</li>
+                            <li>Gestion de protocoles (DHCP, FTP).</li>
+                            <li>Virtualisation (VirtualBox, VMware).</li>
+                            <li>Câblage réseau (RJ45, fibre optique, panneaux de brassage).</li>
+                            <li>Installation et configuration d’équipements réseau.</li>
+                        </ul>
+
+                    <h3>Mes expériences professionnelles</h3>
+                        <table border="1" cellpadding="5" cellspacing="0" style="width:100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background-color: #f2f2f2;">
+                                    <th style="text-align: left; padding: 8px;">Période</th>
+                                    <th style="text-align: left; padding: 8px;">Poste / Structure</th>
+                                    <th style="text-align: left; padding: 8px;">Missions et compétences acquises</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 8px;">01/2023 - 01/2024</td>
+                                    <td style="padding: 8px;">Apprenti - Service Informatique, IUT Annecy</td>
+                                    <td style="padding: 8px;">
+                                        Gestion de parc informatique : configuration de nouveaux équipements, gestion et réservation DHCP, installation de postes de travail.
+                                        <br>Support utilisateur : ticketing, gestion et résolution des demandes.
+                                        <br><strong>Bilan :</strong> Importance de la communication et de l’organisation.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px;">01/2023 - 03/2023</td>
+                                    <td style="padding: 8px;">Stage, DGNSI du Canton de Vaud, Lausanne</td>
+                                    <td style="padding: 8px;">
+                                        Étude d’implantation, câblage management, gestion de stock, planification d’interventions pour déplacement d’équipements.
+                                        <br><strong>Bilan :</strong> Communication entre services et découverte du métier d’administrateur data center.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px;">01/2022 - 03/2022</td>
+                                    <td style="padding: 8px;">Stage, Région Nouvelle-Aquitaine, Périgueux</td>
+                                    <td style="padding: 8px;">
+                                        Repérage dans une armoire raque, tirage de câble, création de prise RJ45.
+                                        <br><strong>Bilan :</strong> Importance de la communication et de l’organisation en équipe.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px;">01/2020 - 12/2020</td>
+                                    <td style="padding: 8px;">Création et participation à une association</td>
+                                    <td style="padding: 8px;">
+                                        Récupération, réinstallation par script et distribution d’équipements informatiques à des personnes dans le besoin.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    <h3>Mes compétences clés</h3>
+                        <ul class="competence-list">
+                            <li>Gestion de parc informatique et support utilisateur.</li>
+                            <li>Câblage réseau (RJ45, fibre optique, panneaux de brassage).</li>
+                            <li>Configuration de serveurs (Windows Server, Linux).</li>
+                            <li>Virtualisation (VirtualBox, VMware).</li>
+                            <li>Planification et organisation d’interventions techniques.</li>
+                            <li>Résolution de problèmes et gestion de tickets.</li>
+                        </ul>
+
+                    <h3>Mes passions</h3>
+                        <p>
+                            En dehors de mon activité professionnelle, je me ressource à travers :
+                        </p>
+                        <ul class="hobby-list">
+                            <li>La <strong>musique électronique</strong> (phonk, techno), qui me permet de me concentrer et de stimuler ma créativité.</li>
+                            <li>Le <strong>snowboard et le ski</strong>, que je pratique en famille ou entre amis pendant la saison hivernale.</li>
+                            <li>Les <strong>jeux vidéo</strong>, qui renforcent mon esprit d’équipe et ma capacité à résoudre des problèmes de manière stratégique.</li>
+                        </ul>
+
+                    <h3>Mon projet professionnel</h3>
+                        <p>
+                            Mon ambition est de devenir <strong>administrateur de data center</strong>, en approfondissant mes connaissances en maintenance, optimisation des infrastructures, et gestion des environnements haute disponibilité. Je suis motivé par les défis techniques et l’évolution constante des technologies, et je cherche à m’investir dans des projets ambitieux pour développer mon expertise.
+                        </p>
+
+
+            <a href="PDF/CV.pdf" class="cv-download" target="_blank">
+                <i class="fas fa-file-pdf"></i> Télécharger mon CV
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Compétence 1 -->
+    <section id="competence1" class="section">
+        <div class="section-content">
+            <div class="skill-icon">
+                <i class="fas fa-server"></i>
+            </div>
+            <h2>Compétence 1 : Gérer le patrimoine informatique</h2>
+            <h3>Contexte : Région Nouvelle-Aquitaine — Équipe e-ANNA24</h3>
+            <p>
+                Au sein de l’<strong>équipe e-ANNA24</strong> (Périgueux), j’ai participé à la <strong>modernisation des infrastructures</strong> de 15 lycées du département.
+                L’équipe gère <strong>75 serveurs, 6000 postes clients et 200 équipements réseau</strong>.
+            </p>
+            <p>
+                <strong>Missions clés</strong> :
+            </p>
+            <ul class="competence-list">
+                <li>
+                    <strong>Rénovation du câblage</strong> :
+                    Refonte complète du câblage d’une salle pédagogique (tirage de câbles, certification, étiquetage).
+                    <br><em>→ Amélioration du débit et réduction des pannes.</em>
+                </li>
+                <li>
+                    <strong>Centralisation des baies de brassage</strong> :
+                    Regroupement des équipements pour simplifier la gestion.
+                    <br><em>→ Gain de temps pour les interventions.</em>
+                </li>
+            </ul>
+            <p>
+                <strong>Preuves</strong> :
+                <a href="PDF/aquitaine1.pdf" target="_blank">
+                    Rapport de stage 1 (p.10-15)
+                </a> |
+                <a href="PDF/aquitaine2.pdf" target="_blank">
+                    Rapport de stage 2 (p.10-15)
+                </a> |
+            </p>
+            <p>
+                <strong>Outils</strong> : Certificateur de câbles, GLPI, Observium, armoires 42U.
+            </p>
+            <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=Infographie+Rénovation+Câblage" alt="Infographie rénovation câblage">
+        </div>
+    </section>
+
+    <!-- Section Compétence 2 -->
+    <section id="competence2" class="section">
+        <div class="section-content">
+            <div class="skill-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <h2>Compétence 2 : Répondre aux incidents et aux demandes d’assistance</h2>
+            <h3>Contexte : IUT Annecy — Service informatique</h3>
+            <p>
+                En apprentissage, j’ai géré les <strong>demandes d’assistance</strong> pour 2000 utilisateurs (étudiants, enseignants, administratifs) via <strong>GLPI</strong>.
+                J’ai résolu <strong>plus de 200 tickets</strong> (50% en moins de 48h).
+            </p>
+            <p>
+                <strong>Exemple marquant</strong> :
+                Résolution d’un incident bloquant pour une salle de TP (50 postes HS).
+            </p>
+            <p>
+                <strong>Preuves</strong> :
+                <a href="captures/capture_glpi.jpg" target="_blank">
+                    Capture d’écran : Ticket résolu
+                </a> |
+                <a href="rapports/rapport_apprentissage.pdf#page=8" target="_blank">
+                    Rapport d’apprentissage (p.8)
+                </a>
+                <a href="IMG-IUT.html" target="_blank">
+                    GLPI
+                </a>
+            </p>
+            <p>
+                <strong>Outils</strong> : GLPI, Active Directory, AnyDesk.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Compétence 3 -->
+    <section id="competence3" class="section">
+        <div class="section-content">
+            <div class="skill-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+            <h2>Compétence 3 : Développer la présence en ligne</h2>
+            <h3>Contexte : Mon portfolio et réseaux professionnels</h3>
+            <p>
+                Ce site est conçu pour <strong>mettre en valeur mes compétences</strong> et faciliter les échanges avec les recruteurs.
+                Il inclut :
+            </p>
+            <ul class="competence-list">
+                <li>Une présentation détaillée de mes <strong>expériences et projets</strong>.</li>
+                <li>Des liens vers mes <strong>rapports de stage, et CV.</li>
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Section Compétence 4 -->
+    <section id="competence4" class="section">
+        <div class="section-content">
+            <div class="skill-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <h2>Compétence 4 : Travailler en mode projet</h2>
+            <h3>Contexte : DGNSI — Réorganisation des baies de brassage</h3>
+            <p>
+                J’ai mené un projet de <strong>réorganisation des équipements rackés</strong>, de la cartographie à la migration, sans interruption de service.
+            </p>
+            <p>
+                <strong>Étapes clés</strong> :
+            </p>
+            <ul class="competence-list">
+                <li>Relevé et cartographie des équipements.</li>
+                <li>Précâblage et teste. </li> 
+                <li>planification de l'interventions (coupure de service).</li>
+                <li>interventions, teste, et validation du service.</li>
+            </ul>
+            <p>
+                <strong>Preuves</strong> :
+                <a href="PDF/rapport de stage DGNSI(3)-DESKTOP-660HUVE.pdf" target="_blank">
+                    Rapport de stage (p.5-9)
+                </a> |
+                <a href="images/diagramme_gantt.jpg" target="_blank">
+                    Diagramme de Gantt
+                </a>
+            </p>
+            <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=Schéma+Baies+Réorganisées" alt="Schéma baies réorganisées">
+        </div>
+    </section>
+
+    <!-- Section Compétence 5 -->
+    <section id="competence5" class="section">
+        <div class="section-content">
+            <div class="skill-icon">
+                <i class="fas fa-network-wired"></i>
+            </div>
+            <h2>Compétence 5 : Mettre à disposition un service informatique</h2>
+            <h3>Contexte : Semitour — Cartographie du réseau de Lascaux IV</h3>
+            <p>
+                J’ai documenté tous les equipement de certain site de la Semitour et également les <strong>interconnexions physiques</strong> du site, pour faciliter le reperage en cas de panne ou installation de nouveaux équipement.
+            </p>
+            <p>
+                <strong>Preuves</strong> :
+                <a href="PDF/rapport de stage semi tour.pdf" target="_blank">
+                    Rapport de stage (p.6-7)
+                </a> |
+                <a href="IMG-semitour.html">
+                    logiciel utiliser
+                </a>
+            </p>
+            <p>
+                <strong>Outils</strong> : Netbox.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Compétence 6 -->
+    <section id="competence6" class="section">
+        <div class="section-content">
+            <div class="skill-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h2>Compétence 6 : Organiser son développement professionnel</h2>
+            <h3>Contexte : Veille technologique et formations</h3>
+            <p>
+                Pour rester opérationnel, je :
+            </p>
+            <ul class="competence-list">
+                <li>Suis des formations (Cisco NetAcad, OpenClassrooms).</li>
+                <li>auto formation lors des stage ou autre experience sur les equipement et outil utiliser</li>
+                <li>Expérimente des outils via des labs personel.</li>
+                <li>Participe à des événements IT.</li>
+            </ul>
+            <p>
+                <strong>Preuves</strong> :
+                <a href="https://www.netacad.com/" target="_blank">
+                    Site Cisco NetAcad
+                </a> |
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Tableau -->
+    <section id="Tableau" class="section">
+        <div class="section-content">
+            <div class="skill-icon">
+                <i class="fas fa-comments"></i>
+            </div>
+            <h2>Tableau de compétences</h2>
+            <article>
+        <!-- Responsive wrapper: keeps the visible area at 80vh and scales the embedded sheet so it never requires horizontal scrolling -->
+                <div id="sheet-wrap" style="width:100%;height:80vh;overflow:hidden;">
+    <iframe id="sheet-iframe"
+                    dada-natural-width="1600"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSrkttRlx6xS2WqQ-zZqwkr344ZvtTRCxm46x2QaeJS-LsrNPYksY9va1XyYrw08wx7UltZdCVXOI-G/pubhtml?gid=1815427748&amp;single=true&amp;widget=true&amp;headers=false"
+        frameborder="0"
+        scrolling="yes"
+        style="width:100%;height:100%;border:0;display:block;">
+    </iframe>
+</div>
+                    <style>
+                        /* Allow page to behave normally vertically but prevent horizontal overflow */
+                        html, body { width:100%; height:100%; margin:0; padding:0; overflow-x:hidden; }
+                        .flex-container, .site-content { box-sizing:border-box; }
+                        #sheet-wrap { overflow:hidden; }
+                        #sheet-iframe { display:block; border:0; }
+                    </style>
+            </article>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>
+            © 2025 Clément Verschaeve |
+            <a href="clement@verschaeve.fr" style="color: #fff;">mail perso : clement@verschaeve.fr</a>
+            <a href="clement.verschaeve@limayrac.fr" style="color: #fff;">mail etudiant : clement.verschaeve@limayrac.fr0</a> |
+            <a href="https://linkedin.com/in/clément-verschaeve" style="color: #fff;" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- Script pour la navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.nav-button');
+            const sections = document.querySelectorAll('.section');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        section.style.opacity = "0";
+                    });
+
+                    button.classList.add('active');
+                    const sectionId = button.getAttribute('data-section');
+                    const section = document.getElementById(sectionId);
+                    section.classList.add('active');
+                    setTimeout(() => {
+                        section.style.opacity = "1";
+                    }, 10);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+        /* Réinitialisation et style général */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        /* En-tête fixe */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+        .nav-button {
+            padding: 0.6rem 1rem;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        .nav-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        .nav-button.active {
+            background-color: #1a5276;
+        }
+        /* Sections */
+        .section {
+            position: fixed;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 120px);
+            overflow-y: auto;
+            display: none;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .section.active {
+            display: block;
+            opacity: 1;
+        }
+        /* Contenu des sections */
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .section-content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        .section-content h3 {
+            color: #3498db;
+            margin-top: 1.5rem;
+        }
+        /* Icônes et images */
+        .skill-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .section-content img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Listes et liens */
+        .competence-list {
+            margin: 1.5rem 0;
+        }
+        .competence-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .competence-list li:before {
+            content: "\2022";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .section-content a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+        /* Bouton CV */
+        .cv-download {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.7rem 1.5rem;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        .cv-download:hover {
+            background-color: #2980b9;
+        }
+        /* Pied de page */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2c3e50;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+        /* Blockquote pour témoignages */
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #555;
+        }
+        blockquote footer {
+            font-style: normal;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 0.5rem;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-button {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+            }
+            .section-content {
+                padding: 1.5rem;
+            }
+        }
+
