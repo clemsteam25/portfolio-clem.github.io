@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>M2L — Maison des Ligues de Lorraine</title>
+</head>
+<body>
+
+  <!-- HAMBURGER -->
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <img src="https://clementjacq.wordpress.com/wp-content/uploads/2019/04/miniature-mdl.png" alt="M2L">
+      <span>M2L</span>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="active" data-page="accueil">
+            <i class="fa-solid fa-house nav-icon"></i> Accueil
+          </a>
+        </li>
+        <li class="sidebar-sep"></li>
+        <li>
+          <a href="#" data-page="judo">
+            <i class="fa-solid fa-child-reaching nav-icon"></i> Judo
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="natation">
+            <i class="fa-solid fa-water nav-icon"></i> Natation
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="rugby">
+            <i class="fa-solid fa-football nav-icon"></i> Rugby XIII
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ======================== PAGE ACCUEIL ======================== -->
+  <div class="page active" id="page-accueil">
+
+    <section class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-accent-circle"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <i class="fa-solid fa-shield-halved"></i>
+          Maison des Ligues de Lorraine
+        </div>
+        <h1 class="hero-title">
+          <span class="line-accent">Sport.</span><br>
+          <span>Culture.</span><br>
+          <span class="line-italic">& Territoire.</span>
+        </h1>
+        <p class="hero-desc">
+          La <strong>M2L</strong> héberge et soutient les ligues sportives régionales de Lorraine. 
+          Financée par le Conseil Régional et gérée par le CROSL, elle met à disposition 
+          des espaces, des services et une infrastructure pour les fédérations et associations sportives.
+        </p>
+        <div class="hero-sports-nav">
+          <a href="#" class="sport-btn primary" data-page="judo">
+            <i class="fa-solid fa-child-reaching"></i> Judo
+          </a>
+          <a href="#" class="sport-btn secondary" data-page="natation">
+            <i class="fa-solid fa-water"></i> Natation
+          </a>
+          <a href="#" class="sport-btn secondary" data-page="rugby">
+            <i class="fa-solid fa-football"></i> Rugby XIII
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="cards-section">
+      <div class="section-label">Nos ligues</div>
+      <h2 class="section-title">Trois disciplines, un territoire</h2>
+      <div class="sport-cards">
+
+        <div class="sport-card" data-page="judo" style="cursor:pointer;">
+          <img src="img/judo.jpg" alt="Judo">
+          <div class="sport-card-content">
+            <div class="sport-card-tag">Art martial</div>
+            <div class="sport-card-title">Judo</div>
+            <div class="sport-card-arrow">Découvrir <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-page="natation" style="cursor:pointer;">
+          <img src="img/nata.jpg" alt="Natation">
+          <div class="sport-card-content">
+            <div class="sport-card-tag">Sport aquatique</div>
+            <div class="sport-card-title">Natation</div>
+            <div class="sport-card-arrow">Découvrir <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-page="rugby" style="cursor:pointer;">
+          <img src="img/rugby1.0.0.jpg" alt="Rugby XIII">
+          <div class="sport-card-content">
+            <div class="sport-card-tag">Sport collectif</div>
+            <div class="sport-card-title">Rugby XIII</div>
+            <div class="sport-card-arrow">Découvrir <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title" style="font-size:1.5rem;margin-bottom:24px;">Joindre la M2L</h2>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i> clement.verschaeve@limayrac.fr</div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i> raphael.tonon@limayrac.fr</div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i> mateo.lasvenes@limayrac.fr</div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i> marieelvire.amani@limayrac.fr</div>
+        </div>
+        <div class="contact-info">
+          <p>La Maison des Ligues de Lorraine héberge les ligues sportives régionales et leur fournit des services administratifs, logistiques et numériques pour assurer leur bon fonctionnement.</p>
+          <p style="margin-top:12px;">Pour toute demande d'information, contactez directement les membres de l'équipe via leurs adresses e-mail.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /page-accueil -->
+
+
+  <!-- ======================== PAGE JUDO ======================== -->
+  <div class="page" id="page-judo">
+    <div class="sport-hero">
+      <img src="img/judo.jpg" alt="Judo">
+      <div class="sport-hero-overlay"></div>
+      <div class="sport-hero-content">
+        <div class="sport-hero-badge"><i class="fa-solid fa-child-reaching"></i> Art martial</div>
+        <div class="sport-hero-title">Ligue de Judo</div>
+      </div>
+    </div>
+
+    <div class="sport-tabs-bar" id="judo-tabs">
+      <button class="tab-btn active" data-tab="judo-histoire"><i class="fa-solid fa-book"></i> Histoire</button>
+      <button class="tab-btn" data-tab="judo-regles"><i class="fa-solid fa-gavel"></i> Règles</button>
+      <button class="tab-btn" data-tab="judo-coaches"><i class="fa-solid fa-user-tie"></i> Entraîneurs</button>
+      <button class="tab-btn" data-tab="judo-categories"><i class="fa-solid fa-layer-group"></i> Catégories</button>
+      <button class="tab-btn" data-tab="judo-lieu"><i class="fa-solid fa-location-dot"></i> Lieu & Horaires</button>
+      <button class="tab-btn" data-tab="judo-calendrier"><i class="fa-solid fa-calendar"></i> Calendrier</button>
+    </div>
+
+    <div class="tab-content active content-prose" id="judo-histoire">
+      <h2>Histoire du Judo</h2>
+      <h3>Création du sport</h3>
+      <p>Le judo a été fondé par <strong>Jigoro Kano</strong> au Japon en 1882. Inspiré des arts martiaux traditionnels japonais, notamment le jujitsu, Kano a conçu le judo comme une méthode d'entraînement physique, mental et moral, favorisant le respect et la discipline. En <strong>1964</strong>, le judo devient le premier art martial intégré aux Jeux olympiques, lors des Jeux de Tokyo.</p>
+      <h3>Évolution de la discipline</h3>
+      <p>Depuis sa création, le judo a évolué avec des règles et des techniques constamment raffinées. Les catégories de poids ont été introduites pour assurer des compétitions équitables. La Fédération Internationale de Judo (FIJ) met régulièrement à jour les règles pour garantir l'équité et moderniser le sport.</p>
+      <h3>Le judo aujourd'hui</h3>
+      <p>Le judo est pratiqué dans le monde entier, avec des millions de licenciés. Des athlètes comme <strong>Teddy Riner</strong> inspirent les jeunes générations et portent le drapeau français au plus haut niveau international.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="judo-regles">
+      <h2>Règles du Judo</h2>
+      <h3>Objectif</h3>
+      <p>Le but d'un combat est de marquer un <strong>ippon</strong> — point complet — pour remporter la victoire immédiatement. Un ippon est attribué pour une projection contrôlée, une immobilisation de 20 secondes, ou une soumission.</p>
+      <h3>Types de points</h3>
+      <div class="points-grid">
+        <div class="point-card"><div class="val">Ippon</div><div class="lbl">Victoire immédiate</div></div>
+        <div class="point-card"><div class="val">Waza-ari</div><div class="lbl">Demi-point</div></div>
+        <div class="point-card"><div class="val">20s</div><div class="lbl">Immobilisation = Ippon</div></div>
+        <div class="point-card"><div class="val">4 min</div><div class="lbl">Durée du combat (adultes)</div></div>
+      </div>
+      <h3>Infractions</h3>
+      <p><strong>Shido :</strong> Avertissement pour infraction mineure. Trois shidos entraînent une disqualification (hansoku-make).</p>
+      <p><strong>Hansoku-make :</strong> Disqualification immédiate pour faute grave.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="judo-coaches">
+      <h2>Entraîneurs</h2>
+      <p>Les entraîneurs de judo jouent un rôle central dans le développement des athlètes. Ils assurent un encadrement technique et mental, et adaptent les entraînements aux objectifs de chaque judoka.</p>
+      <div class="coaches-grid">
+        <div class="coach-card">
+          <div class="coach-name">Shuhei Okano</div>
+          <div class="coach-desc">Grand maître de l'enseignement du judo, il a contribué à l'évolution internationale du sport.</div>
+        </div>
+        <div class="coach-card">
+          <div class="coach-name">Patrick Roux</div>
+          <div class="coach-desc">Entraîneur de l'équipe nationale française, reconnu pour sa rigueur et son approche technique.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content content-prose" id="judo-categories">
+      <h2>Catégories de compétition</h2>
+      <p>Les compétitions de judo se divisent par catégories de poids et d'âge :</p>
+      <h3>Par poids (exemples hommes)</h3>
+      <p>−60 kg · −66 kg · −73 kg · −81 kg · −90 kg · −100 kg · +100 kg</p>
+      <h3>Par âge</h3>
+      <p><strong>Benjamins, Minimes, Cadets, Juniors, Seniors, Vétérans</strong> — chaque catégorie dispose de compétitions adaptées.</p>
+      <h3>Épreuves</h3>
+      <p>Les compétitions se déroulent en individuel ou par équipe. Les épreuves par équipe mettent en valeur la stratégie collective avec des judokas de différents poids.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="judo-lieu">
+      <h2>Lieu & Horaires</h2>
+      <table class="sched-table">
+        <tr><th>Lieu</th><th>Type</th></tr>
+        <tr><td>Dojo affiliés</td><td>Entraînements techniques et compétition</td></tr>
+        <tr><td>Gymnases de club</td><td>Sessions hebdomadaires régulières</td></tr>
+        <tr><td>Centres sportifs régionaux</td><td>Stages pendant les vacances scolaires</td></tr>
+      </table>
+      <p>Les horaires varient selon les groupes d'âge et de niveau. Des stages sont proposés pendant les vacances scolaires pour les jeunes pratiquants.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="judo-calendrier">
+      <h2>Calendrier des compétitions</h2>
+      <table class="sched-table">
+        <tr><th>Mois</th><th>Événement</th><th>Lieu</th></tr>
+        <tr><td><span class="badge">Janvier</span></td><td>Compétitions régionales</td><td>Multiples villes</td></tr>
+        <tr><td><span class="badge">Février</span></td><td>Tournoi National des Juniors</td><td>Paris</td></tr>
+        <tr><td><span class="badge">Mai</span></td><td>Championnats d'Europe</td><td>Variable</td></tr>
+        <tr><td><span class="badge">Juillet</span></td><td>Championnats du monde</td><td>Variable</td></tr>
+        <tr><td><span class="badge">Août</span></td><td>Jeux Olympiques</td><td>Variable</td></tr>
+        <tr><td><span class="badge">Décembre</span></td><td>Tournoi international</td><td>Variable</td></tr>
+      </table>
+    </div>
+  </div><!-- /page-judo -->
+
+
+  <!-- ======================== PAGE NATATION ======================== -->
+  <div class="page" id="page-natation">
+    <div class="sport-hero">
+      <img src="img/nata.jpg" alt="Natation">
+      <div class="sport-hero-overlay"></div>
+      <div class="sport-hero-content">
+        <div class="sport-hero-badge"><i class="fa-solid fa-water"></i> Sport aquatique</div>
+        <div class="sport-hero-title">Ligue de Natation</div>
+      </div>
+    </div>
+
+    <div class="sport-tabs-bar" id="natation-tabs">
+      <button class="tab-btn active" data-tab="nata-histoire"><i class="fa-solid fa-book"></i> Histoire</button>
+      <button class="tab-btn" data-tab="nata-regles"><i class="fa-solid fa-gavel"></i> Règles</button>
+      <button class="tab-btn" data-tab="nata-coaches"><i class="fa-solid fa-user-tie"></i> Entraîneurs</button>
+      <button class="tab-btn" data-tab="nata-categories"><i class="fa-solid fa-layer-group"></i> Catégories</button>
+      <button class="tab-btn" data-tab="nata-lieu"><i class="fa-solid fa-location-dot"></i> Lieu & Horaires</button>
+      <button class="tab-btn" data-tab="nata-calendrier"><i class="fa-solid fa-calendar"></i> Calendrier</button>
+      <button class="tab-btn" data-tab="nata-evenements"><i class="fa-solid fa-star"></i> Événements</button>
+    </div>
+
+    <div class="tab-content active content-prose" id="nata-histoire">
+      <h2>Histoire de la Natation</h2>
+      <h3>Origines</h3>
+      <p>La natation possède une origine ancienne, présente dans les cultures égyptienne et grecque antiques. Au 19e siècle, elle se transforme en sport moderne organisé. En <strong>1908</strong>, la Fédération Internationale de Natation (FINA) est fondée. La natation est au programme olympique depuis <strong>1896</strong> pour les hommes et <strong>1912</strong> pour les femmes.</p>
+      <h3>Évolution</h3>
+      <p>Le papillon apparaît dans les années 1930. Les années 1970 voient l'introduction de nouvelles technologies d'équipements. La FINA met régulièrement à jour les règles pour garantir l'équité des compétitions.</p>
+      <h3>Aujourd'hui</h3>
+      <p>Des champions comme <strong>Léon Marchand</strong> portent la natation française au plus haut niveau mondial, battant des records historiques et inspirant de nouvelles générations.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="nata-regles">
+      <h2>Règles de la Natation</h2>
+      <h3>Règles générales</h3>
+      <p><strong>Départ :</strong> Les nageurs s'alignent sur les plots et ne peuvent plonger avant le signal.</p>
+      <p><strong>Arrivée :</strong> Le premier à toucher la paroi est déclaré vainqueur.</p>
+      <p><strong>Faux départ :</strong> Entraîne la disqualification immédiate.</p>
+      <h3>Règles par style</h3>
+      <table class="sched-table">
+        <tr><th>Style</th><th>Règle principale</th></tr>
+        <tr><td>Nage libre</td><td>Maximum 15m sous l'eau après le départ et chaque virage</td></tr>
+        <tr><td>Dos</td><td>Rester sur le dos tout au long de l'épreuve</td></tr>
+        <tr><td>Brasse</td><td>Les deux bras et jambes avancent simultanément</td></tr>
+        <tr><td>Papillon</td><td>Mouvement ondulatoire du corps, bras et jambes simultanés</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-content content-prose" id="nata-coaches">
+      <h2>Entraîneurs</h2>
+      <p>Les entraîneurs de natation analysent les performances, ajustent les entraînements et créent des programmes sur mesure pour chaque nageur.</p>
+      <div class="coaches-grid">
+        <div class="coach-card">
+          <div class="coach-name">Bob Bowman</div>
+          <div class="coach-desc">Célèbre pour avoir formé Michael Phelps — le nageur le plus décoré de l'histoire olympique — avec des méthodes innovantes et une exigence hors pair.</div>
+        </div>
+        <div class="coach-card">
+          <div class="coach-name">Michel Chrétien</div>
+          <div class="coach-desc">Entraîneur français reconnu, il a formé des talents comme Hugues Duboscq grâce à une approche scientifique et rigoureuse.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content content-prose" id="nata-categories">
+      <h2>Catégories de compétition</h2>
+      <div class="points-grid">
+        <div class="point-card"><div class="val">50m</div><div class="lbl">Sprint explosif</div></div>
+        <div class="point-card"><div class="val">200m</div><div class="lbl">Vitesse & endurance</div></div>
+        <div class="point-card"><div class="val">800m</div><div class="lbl">Fond — endurance</div></div>
+        <div class="point-card"><div class="val">1500m</div><div class="lbl">Fond — maîtrise</div></div>
+      </div>
+      <p>Les compétitions comprennent aussi des épreuves de relais, mettant en valeur l'esprit d'équipe et la coordination entre nageurs de différentes spécialités.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="nata-lieu">
+      <h2>Lieux & Horaires d'entraînement</h2>
+      <table class="sched-table">
+        <tr><th>Jour</th><th>Matin</th><th>Soir</th></tr>
+        <tr><td>Lundi</td><td>Piscine 6h–8h</td><td>Musculation 19h–20h</td></tr>
+        <tr><td>Mardi</td><td>Musculation 7h–8h</td><td>Piscine 18h–20h</td></tr>
+        <tr><td>Mercredi</td><td>Piscine 6h–8h</td><td>Conditionnement 18h–19h</td></tr>
+        <tr><td>Jeudi</td><td>Course extérieure</td><td>Piscine 18h–20h</td></tr>
+        <tr><td>Vendredi</td><td>Musculation 7h–8h</td><td>Piscine 18h–20h</td></tr>
+        <tr><td>Samedi</td><td>Piscine 10h–12h</td><td>—</td></tr>
+        <tr><td>Dimanche</td><td>Course 9h–10h30</td><td>Récupération 14h–15h</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-content content-prose" id="nata-calendrier">
+      <h2>Calendrier des compétitions</h2>
+      <table class="sched-table">
+        <tr><th>Mois</th><th>Événement</th><th>Lieu</th></tr>
+        <tr><td><span class="badge">Janvier</span></td><td>Compétitions régionales</td><td>Multiples villes</td></tr>
+        <tr><td><span class="badge">Mars</span></td><td>Championnats nationaux</td><td>Paris</td></tr>
+        <tr><td><span class="badge">Juillet</span></td><td>Championnats d'Europe</td><td>Variable</td></tr>
+        <tr><td><span class="badge">Août</span></td><td>Jeux Olympiques</td><td>Variable</td></tr>
+        <tr><td><span class="badge">Décembre</span></td><td>Championnats du monde</td><td>Variable</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-content content-prose" id="nata-evenements">
+      <h2>Événements marquants</h2>
+      <h3>Léon Marchand — Championnats du monde 2023</h3>
+      <p>Le prodige français a battu le record historique de <strong>Michael Phelps</strong> au 400m 4 nages, un exploit qui le place parmi les plus grands nageurs de tous les temps.</p>
+      <h3>Caeleb Dressel — JO Tokyo 2020</h3>
+      <p>L'Américain a remporté <strong>5 médailles d'or</strong>, dont le 100m nage libre, démontrant une vitesse et une explosivité sans précédent.</p>
+      <h3>Katie Ledecky — Records de longue distance</h3>
+      <p>Ledecky continue de dominer le fond avec des records mondiaux au 800m et 1500m, inspirant une génération entière de nageurs de fond.</p>
+    </div>
+  </div><!-- /page-natation -->
+
+
+  <!-- ======================== PAGE RUGBY ======================== -->
+  <div class="page" id="page-rugby">
+    <div class="sport-hero">
+      <img src="img/rugby1.0.0.jpg" alt="Rugby XIII">
+      <div class="sport-hero-overlay"></div>
+      <div class="sport-hero-content">
+        <div class="sport-hero-badge"><i class="fa-solid fa-football"></i> Sport collectif</div>
+        <div class="sport-hero-title">Rugby XIII</div>
+      </div>
+    </div>
+
+    <div class="sport-tabs-bar" id="rugby-tabs">
+      <button class="tab-btn active" data-tab="rugby-histoire"><i class="fa-solid fa-book"></i> Histoire</button>
+      <button class="tab-btn" data-tab="rugby-regles"><i class="fa-solid fa-gavel"></i> Règles</button>
+      <button class="tab-btn" data-tab="rugby-coaches"><i class="fa-solid fa-user-tie"></i> Entraîneurs</button>
+      <button class="tab-btn" data-tab="rugby-categories"><i class="fa-solid fa-layer-group"></i> Catégories</button>
+      <button class="tab-btn" data-tab="rugby-lieu"><i class="fa-solid fa-location-dot"></i> Lieu & Horaires</button>
+      <button class="tab-btn" data-tab="rugby-calendrier"><i class="fa-solid fa-calendar"></i> Calendrier</button>
+    </div>
+
+    <div class="tab-content active content-prose" id="rugby-histoire">
+      <h2>Histoire du Rugby à XIII</h2>
+      <p>Le rugby à XIII est né en <strong>1895 en Angleterre</strong>, à la suite d'une scission avec le rugby à XV autour du statut amateur et la rémunération des joueurs dans les régions ouvrières du nord. La Northern Rugby Football Union, devenue la Rugby Football League, ouvre la voie à un nouveau code.</p>
+      <p>Ce sport se distingue par des règles propres : 13 joueurs par équipe et absence de mêlées contestées. Il a gagné en popularité en <strong>Australie, Nouvelle-Zélande et France</strong>, avec des compétitions internationales dont la Coupe du Monde de Rugby à XIII.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="rugby-regles">
+      <h2>Règles du Rugby à XIII</h2>
+      <h3>Principes fondamentaux</h3>
+      <div class="points-grid">
+        <div class="point-card"><div class="val">13</div><div class="lbl">Joueurs par équipe</div></div>
+        <div class="point-card"><div class="val">6</div><div class="lbl">Tenues avant remise</div></div>
+        <div class="point-card"><div class="val">80 min</div><div class="lbl">Durée du match</div></div>
+        <div class="point-card"><div class="val">4 pts</div><div class="lbl">Valeur d'un essai</div></div>
+      </div>
+      <h3>Système de points</h3>
+      <table class="sched-table">
+        <tr><th>Action</th><th>Points</th></tr>
+        <tr><td>Essai</td><td>4 points</td></tr>
+        <tr><td>Transformation</td><td>2 points supplémentaires</td></tr>
+        <tr><td>Pénalité</td><td>2 points</td></tr>
+        <tr><td>Drop goal</td><td>1 point</td></tr>
+      </table>
+      <h3>Le play-the-ball</h3>
+      <p>Après chaque plaquage, le porteur du ballon relâche le ballon et le joue au pied légèrement en arrière vers un coéquipier. Ce mécanisme rend le jeu <strong>fluide et rapide</strong>, sans arrêts prolongés.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="rugby-coaches">
+      <h2>Entraîneurs de référence</h2>
+      <div class="coaches-grid">
+        <div class="coach-card"><div class="coach-name">Mal Meninga</div><div class="coach-desc">Australie — Icône du rugby à XIII, vainqueur de plusieurs Coupes du Monde avec les Kangaroos.</div></div>
+        <div class="coach-card"><div class="coach-name">Wayne Bennett</div><div class="coach-desc">Australie & Angleterre — Légende du XIII, directeur technique des Brisbane Broncos et de l'équipe d'Angleterre.</div></div>
+        <div class="coach-card"><div class="coach-name">Craig Bellamy</div><div class="coach-desc">Melbourne Storm — Plusieurs titres NRL, reconnu pour sa rigueur et ses systèmes défensifs.</div></div>
+        <div class="coach-card"><div class="coach-name">Kristian Woolf</div><div class="coach-desc">St Helens — Plusieurs titres de Super League européens consécutifs.</div></div>
+      </div>
+    </div>
+
+    <div class="tab-content content-prose" id="rugby-categories">
+      <h2>Catégories de pratique</h2>
+      <h3>Par âge</h3>
+      <table class="sched-table">
+        <tr><th>Catégorie</th><th>Tranche d'âge</th></tr>
+        <tr><td>École de rugby</td><td>U7 à U13 (moins de 7 à 12 ans)</td></tr>
+        <tr><td>Jeunes</td><td>U15, U17, U19</td></tr>
+        <tr><td>Seniors</td><td>À partir de 18 ans, sans limite supérieure</td></tr>
+      </table>
+      <h3>Par niveau</h3>
+      <p><strong>Loisir · Régional · National · Professionnel</strong> (Super League Europe / NRL Australie)</p>
+      <h3>Rugby Fauteuil XIII</h3>
+      <p>Version adaptée pour les pratiquants en situation de handicap, avec des compétitions locales et internationales.</p>
+    </div>
+
+    <div class="tab-content content-prose" id="rugby-lieu">
+      <h2>Lieux & Horaires</h2>
+      <table class="sched-table">
+        <tr><th>Lieu</th><th>Usage</th></tr>
+        <tr><td>Terrain extérieur herbe / synthétique</td><td>Entraînements techniques en conditions réelles</td></tr>
+        <tr><td>Salle de musculation</td><td>Force, endurance et puissance</td></tr>
+        <tr><td>Centre sportif couvert</td><td>Par mauvais temps, gazon synthétique</td></tr>
+        <tr><td>Salle de vidéo</td><td>Analyse des matchs et stratégie</td></tr>
+        <tr><td>Centre de réhabilitation</td><td>Kinésithérapie et récupération</td></tr>
+      </table>
+      <h3>Fréquence selon le niveau</h3>
+      <p><strong>Professionnels :</strong> 2 sessions/jour · <strong>Semi-pros :</strong> 3 à 5 fois/semaine · <strong>Amateurs :</strong> 2 à 3 fois/semaine</p>
+    </div>
+
+    <div class="tab-content content-prose" id="rugby-calendrier">
+      <h2>Calendrier du Rugby à XIII en France</h2>
+      <table class="sched-table">
+        <tr><th>Période</th><th>Compétition</th></tr>
+        <tr><td><span class="badge">Août–Sept.</span></td><td>Pré-saison — matchs amicaux</td></tr>
+        <tr><td><span class="badge">Sept.–Mai</span></td><td>Elite 1 — Championnat de France (26–30 matchs)</td></tr>
+        <tr><td><span class="badge">Janv.–Juin</span></td><td>Coupe de France — élimination directe</td></tr>
+        <tr><td><span class="badge">Mai–Juin</span></td><td>Playoffs Elite 1 + Finale du Championnat</td></tr>
+        <tr><td><span class="badge">Automne</span></td><td>Matchs internationaux &amp; préparation équipe de France</td></tr>
+      </table>
+      <img src="img/Tableaux Match pour rugby 1.png" alt="Tableau des matchs" style="width:100%;border-radius:8px;margin-top:20px;border:1px solid var(--border);">
+    </div>
+  </div><!-- /page-rugby -->
+
+
+  <script>
+    // ---- Navigation entre pages ----
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + pageId).classList.add('active');
+      document.querySelectorAll('[data-page]').forEach(el => {
+        el.classList.toggle('active', el.dataset.page === pageId);
+      });
+      closeSidebar();
+      window.scrollTo(0, 0);
+    }
+
+    document.querySelectorAll('[data-page]').forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        showPage(el.dataset.page);
+      });
+    });
+
+    // ---- Sidebar ----
+    const sidebar   = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay   = document.getElementById('overlay');
+
+    function openSidebar()  { sidebar.classList.add('open'); hamburger.classList.add('open'); overlay.classList.add('show'); }
+    function closeSidebar() { sidebar.classList.remove('open'); hamburger.classList.remove('open'); overlay.classList.remove('show'); }
+
+    hamburger.addEventListener('click', () => sidebar.classList.contains('open') ? closeSidebar() : openSidebar());
+    overlay.addEventListener('click', closeSidebar);
+
+    // ---- Onglets sport ----
+    document.querySelectorAll('.sport-tabs-bar').forEach(bar => {
+      bar.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          bar.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const targetId = btn.dataset.tab;
+          // Hide all tab-content in this page
+          btn.closest('.page').querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
