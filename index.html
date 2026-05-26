@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clément Verschaeve – Portfolio BTS SIO SISR</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-top">
+      <h1 class="site-title"><i class="fa-solid fa-user-tie"></i> Clément Verschaeve</h1>
+      <p class="site-subtitle">Étudiant en BTS SIO option SISR | Futur administrateur de data center</p>
+    </div>
+    <nav class="main-nav">
+      <a href="#" class="nav-btn" data-page="accueil"><i class="fa-solid fa-house"></i> Accueil</a>
+      <a href="#" class="nav-btn" data-page="patrimoine"><i class="fa-solid fa-server"></i> Patrimoine informatique</a>
+      <a href="#" class="nav-btn" data-page="support"><i class="fa-solid fa-headset"></i> Support utilisateur</a>
+      <a href="#" class="nav-btn" data-page="presence"><i class="fa-solid fa-globe"></i> Présence en ligne</a>
+      <a href="#" class="nav-btn" data-page="projet"><i class="fa-solid fa-diagram-project"></i> Mode projet</a>
+      <a href="#" class="nav-btn" data-page="services"><i class="fa-solid fa-network-wired"></i> Services informatiques</a>
+      <a href="#" class="nav-btn" data-page="developpement"><i class="fa-solid fa-chart-line"></i> Développement pro</a>
+      <a href="#" class="nav-btn" data-page="competences"><i class="fa-solid fa-comments"></i> Tableau de compétences</a>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <!-- ===== TEMPLATES ===== -->
+
+  <template id="tpl-accueil">
+    <section class="page-content">
+
+      <!-- HERO -->
+      <div class="accueil-hero">
+        <h2>Clément Verschaeve</h2>
+        <p class="tagline">Passionné par les infrastructures réseau et systèmes · En route vers l'administration Reseaux</p>
+        <div class="hero-contact">
+          <a href="mailto:clement@verschaeve.fr" class="hero-link"><i class="fa-solid fa-envelope"></i> clement@verschaeve.fr</a>
+          <a href="tel:+33602132008" class="hero-link"><i class="fa-solid fa-phone"></i> +33 6 02 13 20 08</a>
+          <span class="hero-link"><i class="fa-solid fa-location-dot"></i> Toulouse, 31</span>
+          <a href="CV_clement_verschaeve.pdf" download class="hero-cv-btn"><i class="fa-solid fa-download"></i> Télécharger mon CV</a>
+        </div>
+      </div>
+
+      <!-- HERO BANNER IMAGE -->
+      <div class="hero-banner">
+        <img src="datacenter.png" alt="Datacenter" class="hero-banner-img" />
+        <div class="hero-banner-overlay"></div>
+      </div>
+
+      <!-- BANNIÈRE DISPONIBILITÉ -->
+      <div class="dispo-banner">
+        <i class="fa-solid fa-circle-check"></i>
+        <span><strong>Disponible en alternance</strong> — Recherche un contrat Bachelor / Mastère (1 à 3 ans) · Rentrée 2026</span>
+      </div>
+
+      <!-- CARTES RÉSUMÉ : 3 cartes, cliquables pour agrandir -->
+      <div class="accueil-resume">
+
+        <div class="resume-card expandable">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Objectif professionnel</h3>
+          <div class="card-body">
+            <p>Poursuivre en <strong>Bachelor puis Mastère</strong> en alternance afin de devenir <strong>administrateur réseaux &amp; systèmes</strong> ou <strong>administrateur de datacenter</strong>.</p>
+            <p class="card-extra">Je recherche une entreprise capable de m'accompagner sur le long terme pour développer mes compétences en gestion d'infrastructures, virtualisation et administration de systèmes en production.</p>
+          </div>
+          <span class="card-hint"><i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+
+        <div class="resume-card expandable">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Formation</h3>
+          <div class="card-body">
+            <p><strong>BTS SIO option SISR</strong> — Institut Limayrac, Toulouse (2024–2026, en cours)</p>
+            <p><strong>Bac Pro RISC</strong> — Saint Bénigne, Pontarlier (2020–2023)</p>
+            <p class="card-extra">Spécialisation en administration réseau, systèmes et infrastructure. Formation axée sur la pratique : environnements virtualisés, services réseau et gestion de parc informatique.</p>
+          </div>
+          <span class="card-hint"><i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+
+        <div class="resume-card expandable">
+          <i class="fa-solid fa-star"></i>
+          <h3>Qualités professionnelles</h3>
+          <div class="card-body">
+            <div class="qualites-grid">
+              <span class="qualite-item"><i class="fa-solid fa-people-group"></i> Esprit d'équipe</span>
+              <span class="qualite-item"><i class="fa-solid fa-comments"></i> Communication</span>
+              <span class="qualite-item"><i class="fa-solid fa-magnifying-glass"></i> Rigueur</span>
+              <span class="qualite-item"><i class="fa-solid fa-person-running"></i> Autonomie</span>
+              <span class="qualite-item"><i class="fa-solid fa-arrows-spin"></i> Adaptabilité</span>
+              <span class="qualite-item"><i class="fa-solid fa-fire"></i> Implication</span>
+            </div>
+            <p class="card-extra loisirs-extra"><i class="fa-solid fa-gamepad"></i> <strong>Loisirs :</strong> Snowboard &amp; ski · Jeux de plateau (Catan…) · Jeux vidéo (gestion, aventure, survie)<br><br>
+            <i class="fa-solid fa-hand-holding-heart"></i> <strong>Engagement :</strong> Fondateur d'une association (2022–2023) de revalorisation de matériel informatique redistribué à des écoles et associations.</p>
+          </div>
+          <span class="card-hint"><i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+
+      </div>
+
+      <!-- COMPÉTENCES TECHNIQUES -->
+      <div class="accueil-skills-section">
+        <h3 class="accueil-skills-title"><i class="fa-solid fa-microchip"></i> Compétences techniques</h3>
+        <div class="accueil-skills-grid-2x2">
+
+          <!-- BLOC 1 : Services & Systèmes -->
+          <div class="skill-block-lg">
+            <div class="skill-block-title"><i class="fa-brands fa-windows"></i><i class="fa-brands fa-linux"></i> Services &amp; Systèmes d'exploitation</div>
+
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-brands fa-windows"></i> Windows Server 2019/2022 — Services</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Attribution automatique d'adresses IP aux machines du réseau. Configuré via la console DHCP de Windows Server.">DHCP</span>
+                <span class="stag has-tip" data-tip="Résolution de noms de domaine en adresses IP. Géré depuis la console DNS de Windows Server, souvent couplé à Active Directory.">DNS</span>
+                <span class="stag has-tip" data-tip="Annuaire centralisé Microsoft : gestion des utilisateurs, groupes, ordinateurs et droits d'accès sur un domaine Windows. Administration via la console graphique (ADUC).">Active Directory</span>
+                <span class="stag has-tip" data-tip="Les GPO (Group Policy Objects) permettent d'appliquer des paramètres de configuration à des utilisateurs ou machines du domaine (restrictions, scripts, déploiement logiciel). Gestion via la console GPMC.">GPO</span>
+              </div>
+            </div>
+
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-brands fa-linux"></i> Linux — Debian/Ubuntu (CLI uniquement)</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Administration exclusivement en ligne de commande : navigation, gestion des fichiers, droits (chmod/chown), services (systemctl), utilisateurs.">Terminal &amp; CLI</span>
+                <span class="stag has-tip" data-tip="Configuration du service isc-dhcp-server sous Linux : définition des plages d'adresses, options de bail, fichier /etc/dhcp/dhcpd.conf.">DHCP (isc-dhcp-server)</span>
+                <span class="stag has-tip" data-tip="Déploiement et configuration d'Apache2 sous Linux : hébergement de sites web, configuration des Virtual Hosts, gestion des modules.">Serveur Web Apache</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLOC 2 : Réseaux -->
+          <div class="skill-block-lg">
+            <div class="skill-block-title"><i class="fa-solid fa-network-wired"></i> Réseaux</div>
+
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-solid fa-plug"></i> Installation physique</div>
+              <div class="skill-tags">
+                <span class="stag">Switches / Routeurs</span>
+                <span class="stag">Bornes Wi-Fi</span>
+                <span class="stag">Baie de brassage</span>
+              </div>
+            </div>
+
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-solid fa-sliders"></i> Configuration logicielle</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Segmentation logique du réseau en sous-réseaux virtuels pour isoler les flux et améliorer la sécurité.">VLAN</span>
+                <span class="stag has-tip" data-tip="Configuration des tables de routage pour diriger les paquets entre différents réseaux.">Routage</span>
+                <span class="stag has-tip" data-tip="Mode trunk : transport de plusieurs VLANs simultanément sur un même lien physique entre équipements réseau.">Trunk</span>
+                <span class="stag has-tip" data-tip="Listes de contrôle d'accès permettant de filtrer le trafic réseau selon des règles (source, destination, protocole).">ACL</span>
+                <span class="stag has-tip" data-tip="Hot Standby Router Protocol : protocole de redondance de passerelle. En cas de panne d'un routeur, un second prend automatiquement le relais.">HSRP</span>
+                <span class="stag has-tip" data-tip="Création d'interfaces logiques sur une interface physique pour gérer plusieurs réseaux avec une seule carte réseau.">Sous-interfaces</span>
+              </div>
+            </div>
+
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-solid fa-cloud"></i> Gestion centralisée cloud</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Arista Networks fabrique des équipements réseau haute performance (switches, routeurs). CloudVision est la plateforme SaaS d'Arista permettant de gérer l'ensemble du parc réseau via internet : déploiement de configurations, supervision en temps réel et automatisation. Utilisé lors du stage ENSIACET pour le remplacement des équipements réseau.">Arista Networks</span>
+                <span class="stag has-tip" data-tip="CloudVision Portal (CVP) : interface web centralisée d'Arista pour provisionner, monitorer et maintenir les équipements réseau Arista depuis le cloud, sans intervention physique sur chaque équipement.">CloudVision (CVP)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLOC 3 : Virtualisation -->
+          <div class="skill-block-lg">
+            <div class="skill-block-title"><i class="fa-solid fa-cube"></i> Virtualisation</div>
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-solid fa-building-columns"></i> Hyperviseurs de type 1 (bare-metal)</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Hyperviseur bare-metal de VMware, installé directement sur le matériel. Permet de faire tourner plusieurs VMs en production avec isolation totale des ressources. Standard en datacenter.">VMware ESXi</span>
+                <span class="stag has-tip" data-tip="Hyperviseur open-source basé sur KVM. Alternative libre à ESXi, très utilisé dans les lab et PME. Permet de gérer VMs et conteneurs LXC depuis une interface web.">Proxmox VE</span>
+              </div>
+            </div>
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-solid fa-laptop"></i> Hyperviseur de type 2 (poste de travail)</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Solution de virtualisation Oracle tournant sur un OS hôte (Windows/Linux). Idéale pour les environnements de test et de formation.">VirtualBox</span>
+              </div>
+            </div>
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-solid fa-desktop"></i> Clients légers</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Terminal sans disque local qui se connecte à un serveur distant pour exécuter les applications. Réduit les coûts de maintenance et centralise la gestion. Déployé lors du stage ENSIACET.">Architecture thin client</span>
+                <span class="stag">Déploiement &amp; configuration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLOC 4 : Outils & Méthodes -->
+          <div class="skill-block-lg">
+            <div class="skill-block-title"><i class="fa-solid fa-toolbox"></i> Outils &amp; méthodes</div>
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-solid fa-building"></i> Gestion du parc &amp; infrastructure</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Outil open-source de gestion et documentation des infrastructures réseau : inventaire des équipements, adressage IP, câblage.">NetBox</span>
+                <span class="stag has-tip" data-tip="Microsoft Deployment Toolkit : outil de déploiement automatisé de systèmes d'exploitation sur les postes du parc.">MDT</span>
+                <span class="stag">Gestion de parc matériel</span>
+                <span class="stag">Gestion des garanties</span>
+                <span class="stag">Documentation technique</span>
+              </div>
+            </div>
+            <div class="skill-sub-group">
+              <div class="skill-sub-label"><i class="fa-solid fa-headset"></i> Support utilisateur</div>
+              <div class="skill-tags">
+                <span class="stag has-tip" data-tip="Logiciel ITSM open-source de gestion des incidents, demandes et assets. Utilisé pour créer et suivre les tickets de support.">GLPI / ITSM</span>
+                <span class="stag">Diagnostic &amp; résolution d'incidents</span>
+                <span class="stag">Assistance de proximité</span>
+                <span class="stag">Rédaction de guides utilisateurs</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- EXPÉRIENCES PROFESSIONNELLES -->
+      <div class="accueil-xp-section">
+        <h3 class="accueil-skills-title"><i class="fa-solid fa-briefcase"></i> Expériences professionnelles</h3>
+        <div class="xp-timeline">
+
+          <div class="xp-item">
+            <div class="xp-dot"></div>
+            <div class="xp-date">Jan. – Fév. 2026 <span class="xp-duration">7 semaines</span></div>
+            <div class="xp-content">
+              <div class="xp-title">
+                <span class="xp-badge xp-badge-stage">Stage</span>
+                Toulouse INP-ENSIACET
+                <span class="xp-loc"><i class="fa-solid fa-location-dot"></i> Toulouse</span>
+              </div>
+              <ul class="xp-list">
+                <li><strong>Support utilisateur</strong> — prise en charge des incidents, diagnostic et gestion des garanties</li>
+                <li><strong>Clients légers</strong> — veille technique, paramétrage d'un client de référence, rédaction de documentation</li>
+                <li><strong>Équipements réseau</strong> — découverte de CloudVision, installation de matériel Arista</li>
+              </ul>
+              <div class="xp-tags"><span class="stag">Support</span><span class="stag">Clients légers</span><span class="stag">Arista</span><span class="stag">CloudVision</span></div>
+            </div>
+          </div>
+
+          <div class="xp-item">
+            <div class="xp-dot"></div>
+            <div class="xp-date">Mai – Juin 2025 <span class="xp-duration">6 semaines</span></div>
+            <div class="xp-content">
+              <div class="xp-title">
+                <span class="xp-badge xp-badge-stage">Stage</span>
+                Semitour / Lascaux IV
+                <span class="xp-loc"><i class="fa-solid fa-location-dot"></i> Montignac</span>
+              </div>
+              <ul class="xp-list">
+                <li><strong>Inventaire NetBox</strong> — création des catégories d'équipements (switch, postes), documentation des interconnexions (Ethernet, Fibre)</li>
+              </ul>
+              <div class="xp-tags"><span class="stag">NetBox</span><span class="stag">Inventaire</span><span class="stag">Documentation</span></div>
+            </div>
+          </div>
+
+          <div class="xp-item">
+            <div class="xp-dot xp-dot-alt"></div>
+            <div class="xp-date">Sept. 2023 – Juin 2024 <span class="xp-duration">1 an</span></div>
+            <div class="xp-content">
+              <div class="xp-title">
+                <span class="xp-badge xp-badge-alt">Alternance</span>
+                IUT Annecy
+                <span class="xp-loc"><i class="fa-solid fa-location-dot"></i> Annecy</span>
+              </div>
+              <ul class="xp-list">
+                <li><strong>Gestion de parc</strong> — déploiement MDT, renouvellement d'équipements, réservations DHCP</li>
+                <li><strong>Support</strong> — gestion des demandes d'assistance et des garanties constructeur</li>
+              </ul>
+              <div class="xp-tags"><span class="stag">MDT</span><span class="stag">Gestion de parc</span><span class="stag">DHCP</span><span class="stag">Support</span></div>
+            </div>
+          </div>
+
+          <div class="xp-item">
+            <div class="xp-dot"></div>
+            <div class="xp-date">Jan. – Mars 2023 <span class="xp-duration">8 semaines</span></div>
+            <div class="xp-content">
+              <div class="xp-title">
+                <span class="xp-badge xp-badge-stage">Stage</span>
+                DGNSI du Canton de Vaud
+                <span class="xp-loc"><i class="fa-solid fa-location-dot"></i> Lausanne, Suisse</span>
+              </div>
+              <ul class="xp-list">
+                <li>Planification et déplacement d'équipements avec arrêt de service</li>
+                <li>Mise en place de la redondance électrique et réseau de nouveaux serveurs</li>
+              </ul>
+              <div class="xp-tags"><span class="stag">Serveurs</span><span class="stag">Redondance réseau</span><span class="stag">Gestion de projet</span></div>
+            </div>
+          </div>
+
+          <div class="xp-item">
+            <div class="xp-dot xp-dot-asso"></div>
+            <div class="xp-date">2022 – 2023</div>
+            <div class="xp-content">
+              <div class="xp-title">
+                <span class="xp-badge xp-badge-asso">Bénévolat</span>
+                Création d'une association
+              </div>
+              <ul class="xp-list">
+                <li>Récupération, remise en état et redistribution de matériel informatique à des associations et écoles dans le besoin</li>
+              </ul>
+              <div class="xp-tags"><span class="stag">Reconditionnement</span><span class="stag">Engagement associatif</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </template>
+
+  <template id="tpl-patrimoine">
+
+    <!-- ===== PAGE 1 : DÉFINITION PLEIN ÉCRAN ===== -->
+    <div class="comp-fullscreen">
+      <div class="comp-fullscreen-bg"></div>
+      <div class="comp-fullscreen-content">
+        <div class="comp-fs-icon"><i class="fa-solid fa-server"></i></div>
+        <h2 class="comp-fs-title">Patrimoine informatique</h2>
+        <p class="comp-fs-subtitle">Compétence BTS SIO – SISR</p>
+        <div class="comp-fs-definition">
+          <p>La gestion du patrimoine informatique consiste à <strong>recenser, suivre et maintenir</strong> l'ensemble des équipements et logiciels d'une organisation. Cette compétence couvre l'inventaire du parc matériel (postes, serveurs, périphériques), la gestion des licences logicielles, la maintenance préventive et corrective, ainsi que la mise à jour et le renouvellement du parc.</p>
+          <p>Elle permet d'assurer la <strong>disponibilité, la traçabilité et la conformité</strong> du système d'information.</p>
+        </div>
+        <div class="comp-fs-tags">
+          <span><i class="fa-solid fa-box-archive"></i> Inventaire</span>
+          <span><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance</span>
+          <span><i class="fa-solid fa-file-lines"></i> Documentation</span>
+          <span><i class="fa-solid fa-network-wired"></i> Infrastructure réseau</span>
+        </div>
+        <div class="comp-fs-scroll-hint">
+          <i class="fa-solid fa-chevron-down"></i>
+          <span>Voir les preuves</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 2 : CONTEXTE + PREUVES ===== -->
+    <section class="page-content proof-section">
+
+      <!-- CONTEXTE -->
+      <div class="proof-context-block">
+        <div class="proof-context-badge"><i class="fa-solid fa-briefcase"></i> Contexte de réalisation</div>
+        <h3 class="proof-context-title">Stage 1ère année — Semitour / Lascaux IV</h3>
+        <div class="proof-context-meta">
+          <span><i class="fa-solid fa-calendar"></i> Mai – Juin 2025 &nbsp;·&nbsp; 6 semaines</span>
+          <span><i class="fa-solid fa-location-dot"></i> Montignac, Dordogne</span>
+          <span><i class="fa-solid fa-building"></i> Service informatique SEMITOUR</span>
+        </div>
+        <p class="proof-context-text">
+          La SEMITOUR Périgord gère une dizaine de sites culturels et touristiques en Dordogne. Son service informatique, basé au siège de Périgueux, supervise l'ensemble de l'infrastructure réseau de ces sites. Durant ce stage, j'ai participé à un projet de <strong>documentation et d'inventorisation du parc réseau</strong> via l'outil <strong>NetBox</strong> (solution IPAM/DCIM open-source). 
+        </p>
+        <p class="proof-context-text">
+          La mission consistait à recenser tous les équipements réseau présents sur le site de Lascaux IV (switchs, patch panels, postes de travail, prises murales), à les créer dans NetBox avec leurs caractéristiques, puis à <strong>documenter les interconnexions physiques</strong> entre chaque équipement.
+        </p>
+      </div>
+
+      <!-- PREUVES -->
+      <div class="proof-list-title">
+        <i class="fa-solid fa-folder-open"></i> Preuves et captures d'écran
+      </div>
+
+      <!-- Preuve 1 -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">01</div>
+          <div>
+            <div class="proof-item-title">Création manuelle d'équipements dans NetBox</div>
+            <div class="proof-item-sub">Mission 10 – Inventaire réseau avec NetBox</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Pour chaque équipement recensé sur site, j'ai créé une fiche dans NetBox en renseignant : le nom (selon la norme de nommage), le rôle (switch, poste client, patch panel…), le type de matériel (modèle exact), le tag de catégorie, et le site d'appartenance. Ci-dessous, les formulaires de création pour un poste de travail, un switch Cisco CBS350 et un patch panel.
+        </p>
+        <div class="proof-screenshots">
+          <figure class="proof-fig">
+            <img src="patrimoine/netbox_creation_poste.png" alt="Création d'un poste de travail dans NetBox" />
+            <figcaption>Création d'un poste client (PC 1) — rôle, type, site CIAP</figcaption>
+          </figure>
+          <figure class="proof-fig">
+            <img src="patrimoine/netbox_creation_switch.png" alt="Création d'un switch dans NetBox" />
+            <figcaption>Création d'un switch Cisco CBS350-24P-4G — site CIAP</figcaption>
+          </figure>
+          <figure class="proof-fig">
+            <img src="patrimoine/netbox_creation_patch.png" alt="Création d'un patch panel dans NetBox" />
+            <figcaption>Création d'un patch panel 24 ports — Generic, site CIAP</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Preuve 2 -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">02</div>
+          <div>
+            <div class="proof-item-title">Création en masse via import CSV</div>
+            <div class="proof-item-sub">Annex 10 – Importation de plusieurs équipements simultanément</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Pour gagner du temps, j'ai utilisé la fonctionnalité d'import CSV de NetBox. J'ai préparé un fichier Excel structuré (une colonne par champ : rôle, fabricant, type d'appareil, statut, site, nom), puis exporté en CSV UTF-8 pour l'importer dans NetBox. Cette méthode m'a permis de créer plusieurs équipements (PC 2, PC 3, PC 4, SW 2, PATCH 2) en une seule opération.
+        </p>
+        <div class="proof-screenshots proof-screenshots--2col">
+          <figure class="proof-fig">
+            <img src="patrimoine/netbox_import_csv_excel.png" alt="Fichier Excel préparé pour l'import CSV NetBox" />
+            <figcaption>Fichier Excel structuré avant export CSV (rôle, fabricant, type, statut, site, nom)</figcaption>
+          </figure>
+          <figure class="proof-fig">
+            <img src="patrimoine/netbox_import_csv_result.png" alt="Résultat de l'import CSV dans NetBox" />
+            <figcaption>Résultat dans NetBox après import — PC 2, 3, 4 / SW 2 / PATCH 2 créés et actifs</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Preuve 3 -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">03</div>
+          <div>
+            <div class="proof-item-title">Documentation des connexions entre équipements</div>
+            <div class="proof-item-sub">Annex 11 – Câblage logique entre switchs, patch panels et postes</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Une fois les équipements créés, j'ai documenté les connexions physiques entre eux dans NetBox. Pour chaque lien, je renseigne les deux extrémités : le nom de l'appareil, le type de composant (interface RJ45, port avant/arrière de patch panel…) et le statut du câble. Ces connexions peuvent aussi être importées en masse via CSV.
+        </p>
+        <div class="proof-screenshots proof-screenshots--2col">
+          <figure class="proof-fig">
+            <img src="patrimoine/netbox_connexion_formulaire.png" alt="Formulaire de connexion dans NetBox" />
+            <figcaption>Formulaire de création d'un lien physique : PC 1 (RJ45) ↔ SW 1 (1/0/10)</figcaption>
+          </figure>
+          <figure class="proof-fig">
+            <img src="patrimoine/netbox_connexion_csv.png" alt="Import CSV des connexions dans NetBox" />
+            <figcaption>Tableau des connexions créées par import CSV (side_a, side_b, type, statut)</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Preuve 4 -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">04</div>
+          <div>
+            <div class="proof-item-title">Schéma réseau généré par NetBox</div>
+            <div class="proof-item-sub">Visualisation de l'infrastructure documentée — Annex 11</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          À l'issue de la documentation, NetBox permet de visualiser l'ensemble des connexions sous forme de schéma. On y retrouve les deux switchs (SW 1 et SW 2), les deux patch panels (PATCH 1 et PATCH 2), et les trois postes de travail (PC 2, PC 3, PC 4) avec leurs liaisons physiques RJ45 représentées. Ce schéma sert de référence pour les interventions futures sur le réseau de Lascaux IV.
+        </p>
+        <div class="proof-screenshots proof-screenshots--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="patrimoine/netbox_schema_reseau.png" alt="Schéma réseau généré par NetBox" />
+            <figcaption>Schéma réseau complet : SW1 / SW2 → PATCH2 → PATCH1 → PC2, PC3, PC4</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+  </template>
+
+  <template id="tpl-support">
+
+    <!-- ===== PAGE 1 : DÉFINITION PLEIN ÉCRAN ===== -->
+    <div class="comp-fullscreen">
+      <div class="comp-fullscreen-bg"></div>
+      <div class="comp-fullscreen-content">
+        <div class="comp-fs-icon"><i class="fa-solid fa-headset"></i></div>
+        <h2 class="comp-fs-title">Support utilisateur</h2>
+        <p class="comp-fs-subtitle">Compétence BTS SIO – SISR</p>
+        <div class="comp-fs-definition">
+          <p>Le support utilisateur regroupe l'ensemble des activités d'<strong>assistance technique</strong> apportées aux utilisateurs d'un système d'information. Il comprend la prise en charge des incidents via un outil ITSM (ex : GLPI), le diagnostic et la résolution des pannes matérielles et logicielles, l'assistance à distance ou de proximité, ainsi que la rédaction de procédures et de guides utilisateurs.</p>
+          <p>L'objectif est de garantir la <strong>continuité de service et la satisfaction des utilisateurs</strong>, qu'il s'agisse d'étudiants, d'enseignants ou de personnels administratifs.</p>
+        </div>
+        <div class="comp-fs-tags">
+          <span><i class="fa-solid fa-ticket"></i> Ticketing GLPI</span>
+          <span><i class="fa-solid fa-screwdriver-wrench"></i> Diagnostic &amp; résolution</span>
+          <span><i class="fa-solid fa-people-group"></i> Assistance de proximité</span>
+          <span><i class="fa-solid fa-file-lines"></i> Rédaction de guides</span>
+        </div>
+        <div class="comp-fs-scroll-hint">
+          <i class="fa-solid fa-chevron-down"></i>
+          <span>Voir les preuves</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 2 : CONTEXTE + PREUVES ===== -->
+    <section class="page-content proof-section">
+
+      <!-- CONTEXTE -->
+      <div class="proof-context-block">
+        <div class="proof-context-badge"><i class="fa-solid fa-graduation-cap"></i> Contexte de réalisation</div>
+        <h3 class="proof-context-title">Alternance 1ère année — IUT Annecy</h3>
+        <div class="proof-context-meta">
+          <span><i class="fa-solid fa-calendar"></i> Sept. 2023 – Juin 2024 &nbsp;·&nbsp; 1 an</span>
+          <span><i class="fa-solid fa-location-dot"></i> Annecy, Haute-Savoie</span>
+          <span><i class="fa-solid fa-building"></i> Service informatique de l'IUT</span>
+        </div>
+        <p class="proof-context-text">
+          À l'issue de mon Bac Pro RISC, j'ai souhaité poursuivre mes études en me spécialisant davantage dans les réseaux et systèmes. J'ai intégré un <strong>BUT Réseaux &amp; Télécommunications en alternance</strong>, formation qui m'a permis de combiner apprentissage académique et expérience professionnelle concrète dès la première année.
+        </p>
+        <p class="proof-context-text">
+          Pour cette alternance, j'ai été accepté au sein du <strong>service informatique de l'IUT d'Annecy</strong>. Ce service assure le bon fonctionnement de l'ensemble de l'infrastructure numérique de l'établissement : postes de travail, réseau, serveurs, et bien sûr le support aux utilisateurs. L'IUT accueille plusieurs centaines d'étudiants ainsi que des enseignants et des personnels administratifs, ce qui génère un volume important de demandes d'assistance au quotidien.
+        </p>
+        <p class="proof-context-text">
+          Dans ce cadre, j'ai pris en charge des <strong>tickets de support via GLPI</strong> (logiciel ITSM open-source), en gérant aussi bien les incidents remontés par les étudiants (problèmes de connexion, postes en panne, accès Wi-Fi…) que ceux des enseignants (vidéoprojecteurs, logiciels pédagogiques, comptes…) ou de l'administration (imprimantes, accès réseau, gestion des droits).
+        </p>
+      </div>
+
+      <!-- PREUVES -->
+      <div class="proof-list-title">
+        <i class="fa-solid fa-folder-open"></i> Preuves et captures d'écran — GLPI Ticketing
+      </div>
+
+      <!-- Preuve 1 -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">01</div>
+          <div>
+            <div class="proof-item-title">Création d'un ticket — prise en charge d'un incident</div>
+            <div class="proof-item-sub">Formulaire de saisie : catégorie, priorité, description, demandeur</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Lorsqu'un utilisateur signale un problème, un ticket est créé dans GLPI en renseignant le type de demande (incident ou service), la catégorie (matériel, logiciel, réseau, accès…), la priorité, le demandeur et une description précise du problème. Ce ticket est ensuite assigné au technicien compétent pour traitement et suivi jusqu'à résolution.
+        </p>
+        <div class="proof-screenshots proof-screenshots--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="support/glpi_creation_ticket.png" alt="Création d'un ticket GLPI" />
+            <figcaption>Formulaire de création d'un ticket GLPI — type, catégorie, priorité, description et demandeur</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Preuve 2 -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">02</div>
+          <div>
+            <div class="proof-item-title">Liste des tickets — file d'incidents</div>
+            <div class="proof-item-sub">Le ticket créé apparaît dans la file et est pris en charge</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Une fois créé, le ticket apparaît dans la liste générale des incidents. Chaque ligne indique le titre, le demandeur, la date d'ouverture, la priorité et le statut (nouveau, en cours, en attente, résolu). Je traitais et clôturais les tickets qui m'étaient assignés, qu'ils proviennent d'étudiants, d'enseignants ou de l'administration.
+        </p>
+        <div class="proof-screenshots proof-screenshots--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="support/glpi_liste_tickets.png" alt="Liste des tickets GLPI" />
+            <figcaption>Liste des tickets GLPI — incidents avec priorité, statut et technicien assigné</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Preuve 3 -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">03</div>
+          <div>
+            <div class="proof-item-title">Tableau de bord GLPI — suivi de l'activité globale</div>
+            <div class="proof-item-sub">Vue d'ensemble des tickets ouverts, en cours et résolus</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Le tableau de bord GLPI offre une vue consolidée de l'activité du service support : nombre de tickets ouverts, en cours de traitement et résolus, répartition par priorité et par technicien. Il permet de piloter la charge de travail et de s'assurer qu'aucune demande ne reste sans réponse, que ce soit pour les étudiants, les enseignants ou l'administration de l'IUT.
+        </p>
+        <div class="proof-screenshots proof-screenshots--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="support/glpi_dashboard.png" alt="Tableau de bord GLPI" />
+            <figcaption>Tableau de bord GLPI — vue d'ensemble des tickets et statistiques du service</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+  </template>
+
+  <template id="tpl-presence">
+
+    <!-- ===== PAGE 1 : DÉFINITION PLEIN ÉCRAN ===== -->
+    <div class="comp-fullscreen">
+      <div class="comp-fullscreen-bg"></div>
+      <div class="comp-fullscreen-content">
+        <div class="comp-fs-icon"><i class="fa-solid fa-globe"></i></div>
+        <h2 class="comp-fs-title">Présence en ligne</h2>
+        <p class="comp-fs-subtitle">Compétence BTS SIO – SISR</p>
+        <div class="comp-fs-definition">
+          <p>La présence en ligne désigne la mise en place et la gestion de l'<strong>identité numérique</strong> d'une organisation sur Internet. Cette compétence englobe la création et le déploiement de sites web, la configuration de l'hébergement et des noms de domaine, la gestion des enregistrements DNS, l'optimisation du référencement naturel (SEO), ainsi que la conception d'interfaces adaptées aux besoins des utilisateurs.</p>
+          <p>Elle vise à assurer une <strong>visibilité maîtrisée et professionnelle</strong> sur le web, en répondant à un cahier des charges défini en amont avec le commanditaire.</p>
+        </div>
+        <div class="comp-fs-tags">
+          <span><i class="fa-solid fa-code"></i> HTML / CSS / JS</span>
+          <span><i class="fa-solid fa-file-lines"></i> Cahier des charges</span>
+          <span><i class="fa-solid fa-paintbrush"></i> Design web</span>
+          <span><i class="fa-solid fa-magnifying-glass"></i> UX / Ergonomie</span>
+        </div>
+        <div class="comp-fs-scroll-hint">
+          <i class="fa-solid fa-chevron-down"></i>
+          <span>Voir les preuves</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 2 : CONTEXTE ===== -->
+    <section class="page-content proof-section">
+
+      <div class="proof-context-block">
+        <div class="proof-context-badge"><i class="fa-solid fa-school"></i> Contexte de réalisation</div>
+        <h3 class="proof-context-title">Projet AP — Maison des Ligues de Lorraine (M2L)</h3>
+        <div class="proof-context-meta">
+          <span><i class="fa-solid fa-calendar"></i> Année scolaire 2024–2025</span>
+          <span><i class="fa-solid fa-building"></i> Lycée Limayrac — BTS SIO SISR</span>
+          <span><i class="fa-solid fa-users"></i> Projet d'équipe — Atelier Professionnel (AP)</span>
+        </div>
+        <p class="proof-context-text">
+          Dans le cadre du module d'<strong>Atelier Professionnel (AP)</strong> de 2ème année de BTS SIO, la <strong>Maison des Ligues de Lorraine (M2L)</strong> nous a contactés afin de réaliser un site web vitrine présentant leur organisation et les trois disciplines sportives hébergées sur leur site. La M2L est un organisme financé par le Conseil Régional de Lorraine qui héberge les ligues sportives régionales et leur met à disposition locaux, équipements et services mutualisés.
+        </p>
+        <p class="proof-context-text">
+          Le projet a suivi une démarche complète : rédaction d'un <strong>cahier des charges</strong> en concertation avec le commanditaire, puis développement du site. Aucune restriction technique ni charte graphique n'ont été imposées — la seule exigence du commanditaire était que le rendu soit <strong>esthétique et agréable à utiliser</strong>. Le site propose une page d'accueil présentant la M2L, et une page dédiée à chacun des trois sports avec leurs spécificités.
+        </p>
+      </div>
+
+      <!-- CAHIER DES CHARGES -->
+      <div class="proof-list-title">
+        <i class="fa-solid fa-folder-open"></i> Preuves — Cahier des charges &amp; Site réalisé
+      </div>
+
+      <!-- Preuve 1 : CDC -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">01</div>
+          <div>
+            <div class="proof-item-title">Cahier des charges du site M2L</div>
+            <div class="proof-item-sub">Document de spécification rédigé avant le développement</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Avant de démarrer le développement, nous avons rédigé un cahier des charges en réponse à la demande du commanditaire. Ce document définit le périmètre fonctionnel (4 pages : accueil + 3 sports), les exigences techniques — libres de tout choix imposé — et les critères de validation. La charte graphique n'ayant pas été imposée par la M2L, l'équipe a eu carte blanche sur l'esthétique, avec pour seule contrainte que le rendu soit beau et professionnel.
+        </p>
+
+        <!-- Mini aperçu CDC en blocs -->
+        <div class="cdc-grid">
+          <div class="cdc-card">
+            <div class="cdc-card-icon"><i class="fa-solid fa-list-check"></i></div>
+            <div class="cdc-card-title">Périmètre fonctionnel</div>
+            <div class="cdc-card-body">1 page d'accueil présentant la M2L + 1 page par sport (Judo, Natation, Rugby XIII) avec onglets thématiques.</div>
+          </div>
+          <div class="cdc-card">
+            <div class="cdc-card-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="cdc-card-title">Exigences techniques</div>
+            <div class="cdc-card-body">Aucune restriction imposée par le commanditaire. Choix libre des technologies — HTML5 / CSS3 / JS natif retenus par l'équipe.</div>
+          </div>
+          <div class="cdc-card">
+            <div class="cdc-card-icon"><i class="fa-solid fa-paintbrush"></i></div>
+            <div class="cdc-card-title">Charte graphique</div>
+            <div class="cdc-card-body">Pas de spécification imposée — seule exigence : que le site soit beau. Choix esthétiques laissés à la discrétion de l'équipe.</div>
+          </div>
+          <div class="cdc-card">
+            <div class="cdc-card-icon"><i class="fa-solid fa-check-circle"></i></div>
+            <div class="cdc-card-title">Critères de validation</div>
+            <div class="cdc-card-body">Navigation fonctionnelle, contenu complet par sport, rendu responsive et esthétique cohérent sur toutes les pages.</div>
+          </div>
+        </div>
+
+        <a class="cdc-download-btn" href="presence/cahier_des_charges_M2L.docx" download>
+          <i class="fa-solid fa-download"></i> Télécharger le cahier des charges (DOCX)
+        </a>
+      </div>
+
+      <!-- Preuve 2 : SITE -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">02</div>
+          <div>
+            <div class="proof-item-title">Site web réalisé — M2L Maison des Ligues de Lorraine</div>
+            <div class="proof-item-sub">Livrable final du projet AP — version remasterisée</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Le site développé est une application monopage (SPA) en HTML/CSS/JavaScript natif. Il propose une navigation fluide entre les 4 pages via un menu hamburger latéral, un système d'onglets pour organiser le contenu de chaque discipline sportive, des photos hero pleine largeur, et une interface responsive. Une version améliorée a ensuite été produite avec un design plus soigné (typographies distinctives, animations CSS, mise en page asymétrique).
+        </p>
+
+        <!-- Aperçu visuel du site -->
+        <div class="site-preview-block">
+          <div class="site-preview-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="site-preview-url">presence/site/Index.html</span>
+          </div>
+          <div class="site-preview-body">
+            <div class="site-preview-left">
+              <div class="preview-badge">Sport · Culture · Territoire</div>
+              <div class="preview-title">MAISON DES<br>LIGUES DE<br><span>LORRAINE</span></div>
+              <div class="preview-tags">
+                <span>Judo</span>
+                <span>Natation</span>
+                <span>Rugby XIII</span>
+              </div>
+            </div>
+            <div class="site-preview-right">
+              <div class="preview-nav-item active"><i class="fa-solid fa-house"></i> Accueil</div>
+              <div class="preview-nav-item"><i class="fa-solid fa-child-reaching"></i> Judo</div>
+              <div class="preview-nav-item"><i class="fa-solid fa-water"></i> Natation</div>
+              <div class="preview-nav-item"><i class="fa-solid fa-football"></i> Rugby XIII</div>
+            </div>
+          </div>
+        </div>
+
+        <a class="site-open-btn" href="presence/site/Index.html" target="_blank">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Ouvrir le site M2L dans un nouvel onglet
+        </a>
+      </div>
+
+    </section>
+  </template>
+
+  <template id="tpl-projet">
+
+    <!-- ===== PAGE 1 : DÉFINITION PLEIN ÉCRAN ===== -->
+    <div class="comp-fullscreen">
+      <div class="comp-fullscreen-bg"></div>
+      <div class="comp-fullscreen-content">
+        <div class="comp-fs-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h2 class="comp-fs-title">Mode projet</h2>
+        <p class="comp-fs-subtitle">Compétence BTS SIO – SISR</p>
+        <div class="comp-fs-definition">
+          <p>Le mode projet désigne la capacité à <strong>concevoir, planifier, conduire et clôturer</strong> un projet informatique de manière structurée. Cela inclut la définition des besoins via un cahier des charges, la gestion des ressources et des contraintes, la communication avec les parties prenantes, la coordination des interventions et la production d'un bilan de fin de projet.</p>
+          <p>Cette compétence implique également de savoir <strong>anticiper les risques</strong>, respecter les procédures en vigueur (demandes de changement, validation des utilisateurs) et garantir la continuité de service tout au long du projet.</p>
+        </div>
+        <div class="comp-fs-tags">
+          <span><i class="fa-solid fa-file-lines"></i> Cahier des charges</span>
+          <span><i class="fa-solid fa-screwdriver-wrench"></i> Gestion technique</span>
+          <span><i class="fa-solid fa-envelope"></i> Communication</span>
+          <span><i class="fa-solid fa-circle-check"></i> Validation & clôture</span>
+        </div>
+        <div class="comp-fs-scroll-hint">
+          <i class="fa-solid fa-chevron-down"></i>
+          <span>Voir les preuves</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 2 : CONTEXTE + PREUVES ===== -->
+    <section class="page-content proof-section">
+
+      <!-- CONTEXTE -->
+      <div class="proof-context-block">
+        <div class="proof-context-badge"><i class="fa-solid fa-server"></i> Contexte de réalisation</div>
+        <h3 class="proof-context-title">Stage de Terminale — DGNSI, Canton de Vaud (Suisse)</h3>
+        <div class="proof-context-meta">
+          <span><i class="fa-solid fa-calendar"></i> Février – Mars 2023 &nbsp;·&nbsp; 6 semaines</span>
+          <span><i class="fa-solid fa-location-dot"></i> Renens, Lausanne — Suisse</span>
+          <span><i class="fa-solid fa-building"></i> Direction Générale du Numérique et des SI</span>
+        </div>
+        <p class="proof-context-text">
+          Dans le cadre de mon stage de Terminale Bac Pro RISC, j'ai été intégré au service <strong>Datacenter & Réseau</strong> de la DGNSI (Direction Générale du Numérique et des Systèmes d'Information) du Canton de Vaud, en Suisse. La DGNSI assure la disponibilité de l'ensemble du système d'information de l'administration cantonale vaudoise, depuis son data center principal situé à Renens.
+        </p>
+        <p class="proof-context-text">
+          Mon maître de stage, <strong>M. GILLER Patrick</strong> (Administrateur Data Center), m'a confié un projet concret : <strong>déplacer trois équipements réseau</strong> d'une salle à l'autre du data center, afin de libérer de la place pour l'arrivée de futurs équipements. Ce projet, mené de bout en bout, m'a permis de mettre en pratique toutes les étapes d'une conduite de projet réelle en environnement de production.
+        </p>
+      </div>
+
+      <div class="proof-list-title">
+        <i class="fa-solid fa-folder-open"></i> Déroulement du projet — 4 étapes
+      </div>
+
+      <!-- PREUVE 1 : CDC -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">01</div>
+          <div>
+            <div class="proof-item-title">Cahier des charges — Besoins et attendus du projet</div>
+            <div class="proof-item-sub">Définition du périmètre, des ressources, des contraintes et des critères de validation</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Avant toute action, j'ai rédigé un cahier des charges définissant clairement l'objectif du projet : déplacer trois équipements réseau du point A (racks 2C-01/02/03, salle 2) vers le point B (rack 1D-03, salle 1). Le document précise les ressources mobilisées — principalement des câbles RJ45 et moi-même comme ressource humaine — ainsi que la contrainte principale : <strong>une coupure de service est nécessaire</strong>, ce qui implique l'accord préalable des utilisateurs concernés.
+        </p>
+        <div class="cdc-grid">
+          <div class="cdc-card">
+            <div class="cdc-card-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <div class="cdc-card-title">Objectif</div>
+            <div class="cdc-card-body">Déplacer 3 équipements réseau du rack 2C (salle 2) vers le rack 1D-03 (salle 1) pour libérer de l'espace.</div>
+          </div>
+          <div class="cdc-card">
+            <div class="cdc-card-icon"><i class="fa-solid fa-box"></i></div>
+            <div class="cdc-card-title">Ressources & coûts</div>
+            <div class="cdc-card-body">Câbles RJ45 + stagiaire (moi). Matériaux en stock — aucun coût externe engagé.</div>
+          </div>
+          <div class="cdc-card">
+            <div class="cdc-card-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="cdc-card-title">Contrainte principale</div>
+            <div class="cdc-card-body">Intervention nécessitant une coupure de service. Accord des utilisateurs obligatoire avant toute action.</div>
+          </div>
+          <div class="cdc-card">
+            <div class="cdc-card-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="cdc-card-title">Critères de validation</div>
+            <div class="cdc-card-body">Équipements opérationnels après intervention, connexions rétablies, clôture validée sur EasyVista.</div>
+          </div>
+        </div>
+        <a class="cdc-download-btn" href="projet/cahier_des_charges_projet_DGNSI.docx" download>
+          <i class="fa-solid fa-download"></i> Télécharger le cahier des charges (DOCX)
+        </a>
+      </div>
+
+      <!-- PREUVE 2 : PRÉPARATION -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">02</div>
+          <div>
+            <div class="proof-item-title">Préparation — Repérage et plan d'implantation</div>
+            <div class="proof-item-sub">Où sont les équipements ? Où vont-ils ? Documentation des connexions existantes</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          La phase de préparation a consisté à me rendre physiquement dans la salle 2 pour recenser toutes les connexions existantes entre les trois équipements encore actifs (SwitchOne, Équipement 1, Équipement 2). J'ai documenté chaque liaison dans un tableau de repérage (type RJ45 ou fibre, port de départ, port d'arrivée), puis schématisé les connexions. J'ai ensuite réalisé le plan d'implantation du rack 1D-03 (salle 1) pour identifier les emplacements disponibles et préparer le câblage en avance.
+        </p>
+        <div class="proof-screenshots proof-screenshots--2col" style="margin-bottom:14px;">
+          <figure class="proof-fig">
+            <img src="projet/reperage_connexions.png" alt="Schéma des connexions entre équipements" />
+            <figcaption>Schéma des équipements et leurs connexions — SwitchOne, Équipement 1 &amp; 2, Patch panel fibre et RJ45</figcaption>
+          </figure>
+          <figure class="proof-fig">
+            <img src="projet/reperage_tableau.png" alt="Tableau de repérage des liaisons" />
+            <figcaption>Tableau de repérage — type de liaison (RJ45 / fibre), port de départ et port d'arrivée</figcaption>
+          </figure>
+        </div>
+        <div class="proof-screenshots proof-screenshots--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="projet/reperage_schema.png" alt="Plan des salles avec ancien et nouveau chemin" />
+            <figcaption>Plan du data center — ancien chemin (rouge, salle 2) et nouveau chemin (vert, salle 1) via les patch panels</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- PREUVE 3 : MAILS -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">03</div>
+          <div>
+            <div class="proof-item-title">Planification — Coordination et accord pour la coupure</div>
+            <div class="proof-item-sub">Échange de mails avec les utilisateurs pour définir le créneau d'intervention</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          L'intervention nécessitant une coupure de service, il était indispensable d'obtenir l'accord des utilisateurs des équipements avant de procéder. J'ai contacté l'équipe concernée par e-mail pour les informer de l'opération, les délais et proposer un créneau. Après plusieurs échanges, un accord a été trouvé. Une demande de changement a ensuite été officialisée sur <strong>EasyVista</strong> (outil ITSM de la DGNSI). Cette phase de coordination représente la majorité du délai total du projet — la prise de décision sur le créneau a allongé la durée à environ <strong>2 semaines</strong>.
+        </p>
+
+        <!-- MAILS HTML -->
+        <div class="mail-thread">
+
+          <div class="mail-card mail-sent">
+            <div class="mail-header">
+              <div class="mail-header-row">
+                <span class="mail-label">De</span>
+                <span class="mail-value">Clément VERSCHAEVE &lt;clement.verschaeve@vd.ch&gt;</span>
+              </div>
+              <div class="mail-header-row">
+                <span class="mail-label">À</span>
+                <span class="mail-value">Équipe exploitation — DGNSI &lt;exploitation@vd.ch&gt;</span>
+              </div>
+              <div class="mail-header-row">
+                <span class="mail-label">Date</span>
+                <span class="mail-value">Lundi 6 mars 2023 — 09h14</span>
+              </div>
+              <div class="mail-subject">Déplacement d'équipements — Demande de créneau d'intervention</div>
+            </div>
+            <div class="mail-body">
+              <p>Bonjour,</p>
+              <p>Dans le cadre d'une opération de réorganisation du data center, nous allons procéder au déplacement de trois équipements situés dans les racks 2C-01, 2C-02 et 2C-03 (Salle 2) vers le rack 1D-03 (Salle 1).</p>
+              <p>Cette intervention nécessitera une <strong>coupure de service</strong> de ces équipements. Durée estimée : 1 à 2 heures.</p>
+              <p>Pourriez-vous nous indiquer vos disponibilités afin de planifier cette intervention à un moment qui vous convient ?</p>
+              <p class="mail-sig">Cordialement,<br>Clément VERSCHAEVE — Stagiaire Data Center / DGNSI</p>
+            </div>
+          </div>
+
+          <div class="mail-card mail-received">
+            <div class="mail-header">
+              <div class="mail-header-row">
+                <span class="mail-label">De</span>
+                <span class="mail-value">Équipe exploitation — DGNSI &lt;exploitation@vd.ch&gt;</span>
+              </div>
+              <div class="mail-header-row">
+                <span class="mail-label">À</span>
+                <span class="mail-value">Clément VERSCHAEVE &lt;clement.verschaeve@vd.ch&gt;</span>
+              </div>
+              <div class="mail-header-row">
+                <span class="mail-label">Date</span>
+                <span class="mail-value">Lundi 6 mars 2023 — 14h37</span>
+              </div>
+              <div class="mail-subject">RE : Déplacement d'équipements — Demande de créneau d'intervention</div>
+            </div>
+            <div class="mail-body">
+              <p>Bonjour Clément,</p>
+              <p>Merci pour votre message. Nous utilisons ces équipements principalement en journée du lundi au vendredi.</p>
+              <p>Seriez-vous disponibles pour intervenir le <strong>vendredi 10 mars à partir de 18h30</strong> ? Nous pourrons être présents sur site pour les tests de validation.</p>
+              <p class="mail-sig">Cordialement,<br>Équipe Exploitation — DGNSI</p>
+            </div>
+          </div>
+
+          <div class="mail-card mail-sent">
+            <div class="mail-header">
+              <div class="mail-header-row">
+                <span class="mail-label">De</span>
+                <span class="mail-value">Clément VERSCHAEVE &lt;clement.verschaeve@vd.ch&gt;</span>
+              </div>
+              <div class="mail-header-row">
+                <span class="mail-label">À</span>
+                <span class="mail-value">Équipe exploitation — DGNSI &lt;exploitation@vd.ch&gt;</span>
+              </div>
+              <div class="mail-header-row">
+                <span class="mail-label">Date</span>
+                <span class="mail-value">Mardi 7 mars 2023 — 08h52</span>
+              </div>
+              <div class="mail-subject">RE : Déplacement d'équipements — Confirmation du créneau</div>
+            </div>
+            <div class="mail-body">
+              <p>Bonjour,</p>
+              <p>Après validation avec M. GILLER, le <strong>vendredi 10 mars à 18h30</strong> nous convient parfaitement. Nous confirmons ce créneau.</p>
+              <p>Une demande de changement (« change ») sera créée dans EasyVista d'ici demain pour officialiser l'opération.</p>
+              <p class="mail-sig">Cordialement,<br>Clément VERSCHAEVE — Stagiaire Data Center / DGNSI</p>
+            </div>
+          </div>
+
+          <div class="mail-card mail-received mail-success">
+            <div class="mail-header">
+              <div class="mail-header-row">
+                <span class="mail-label">De</span>
+                <span class="mail-value">Équipe exploitation — DGNSI &lt;exploitation@vd.ch&gt;</span>
+              </div>
+              <div class="mail-header-row">
+                <span class="mail-label">À</span>
+                <span class="mail-value">clement.verschaeve@vd.ch ; patrick.giller@vd.ch</span>
+              </div>
+              <div class="mail-header-row">
+                <span class="mail-label">Date</span>
+                <span class="mail-value">Vendredi 10 mars 2023 — 21h03</span>
+              </div>
+              <div class="mail-subject">RE : Déplacement d'équipements — Intervention terminée ✓</div>
+            </div>
+            <div class="mail-body">
+              <p>Bonsoir,</p>
+              <p>L'intervention s'est déroulée sans problème. Nos équipements sont opérationnels et les tests sont concluants.</p>
+              <p>Vous pouvez <strong>clôturer la demande de changement</strong> dans EasyVista.</p>
+              <p>Merci pour le sérieux de l'intervention.</p>
+              <p class="mail-sig">Cordialement,<br>Équipe Exploitation — DGNSI</p>
+            </div>
+          </div>
+
+        </div><!-- /mail-thread -->
+      </div>
+
+      <!-- PREUVE 4 : MISE EN PLACE & CLÔTURE -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">04</div>
+          <div>
+            <div class="proof-item-title">Mise en place & clôture du projet</div>
+            <div class="proof-item-sub">Intervention le jour J — Tests — Validation sur EasyVista</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Le vendredi 10 mars à 18h30, conformément au créneau validé, j'ai procédé au déplacement des équipements : démontage dans les racks 2C, transport et remontage dans le rack 1D-03, recâblage en suivant le plan préparé en amont. Les utilisateurs se sont ensuite rendus sur place pour effectuer leurs propres tests fonctionnels. L'ensemble des connexions s'est avéré opérationnel. Quelques câbles inutilisés ont été retirés suite aux tests.
+        </p>
+        <div class="projet-bilan-grid">
+          <div class="bilan-card">
+            <div class="bilan-icon" style="color:#4ab3f4;"><i class="fa-solid fa-clock"></i></div>
+            <div class="bilan-val">2 semaines</div>
+            <div class="bilan-lbl">Durée totale du projet</div>
+          </div>
+          <div class="bilan-card">
+            <div class="bilan-icon" style="color:#4cde82;"><i class="fa-solid fa-plug"></i></div>
+            <div class="bilan-val">8 liaisons</div>
+            <div class="bilan-lbl">Connexions déplacées (6 RJ45 + 2 fibre)</div>
+          </div>
+          <div class="bilan-card">
+            <div class="bilan-icon" style="color:#f9a45c;"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="bilan-val">Tests OK</div>
+            <div class="bilan-lbl">Validés par les utilisateurs sur site</div>
+          </div>
+          <div class="bilan-card">
+            <div class="bilan-icon" style="color:#e8612a;"><i class="fa-solid fa-file-circle-check"></i></div>
+            <div class="bilan-val">EasyVista</div>
+            <div class="bilan-lbl">Change clôturé — statut « OK » par M. GILLER</div>
+          </div>
+        </div>
+        <div class="proof-confidential-note">
+          <i class="fa-solid fa-lock"></i>
+          <span>Pas de capture d'écran disponible pour cette étape — intervention en environnement de production confidentiel (data center cantonal, Canton de Vaud).</span>
+        </div>
+      </div>
+
+    </section>
+  </template>
+
+  <template id="tpl-services">
+
+    <!-- ===== PAGE 1 : DÉFINITION PLEIN ÉCRAN ===== -->
+    <div class="comp-fullscreen">
+      <div class="comp-fullscreen-bg"></div>
+      <div class="comp-fullscreen-content">
+        <div class="comp-fs-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <h2 class="comp-fs-title">Services informatiques</h2>
+        <p class="comp-fs-subtitle">Compétence BTS SIO – SISR</p>
+        <div class="comp-fs-definition">
+          <p>L'administration des services informatiques couvre la mise en place et la gestion des services réseau essentiels au fonctionnement d'une infrastructure : <strong>DHCP, DNS, Wi-Fi, routage</strong>, partage de fichiers, accès distant. Cette compétence implique de configurer, sécuriser et maintenir ces services pour garantir leur disponibilité et leur performance.</p>
+          <p>Elle inclut également la notion de <strong>redondance</strong> — concevoir une architecture qui assure la continuité de service même en cas de défaillance d'un équipement.</p>
+        </div>
+        <div class="comp-fs-tags">
+          <span><i class="fa-solid fa-wifi"></i> Wi-Fi & Bornes</span>
+          <span><i class="fa-solid fa-server"></i> Serveur DHCP</span>
+          <span><i class="fa-solid fa-route"></i> Routage & Redondance</span>
+          <span><i class="fa-solid fa-shield-halved"></i> Sécurité réseau</span>
+        </div>
+        <div class="comp-fs-scroll-hint">
+          <i class="fa-solid fa-chevron-down"></i>
+          <span>Voir les preuves</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 2 : CONTEXTE + PREUVES ===== -->
+    <section class="page-content proof-section">
+
+      <div class="proof-context-block">
+        <div class="proof-context-badge"><i class="fa-solid fa-school"></i> Contexte de réalisation</div>
+        <h3 class="proof-context-title">Mission AP — Projet KIWI — M2L (Maison des Ligues de Lorraine)</h3>
+        <div class="proof-context-meta">
+          <span><i class="fa-solid fa-calendar"></i> BTS SIO SISR — 2ème année</span>
+          <span><i class="fa-solid fa-building"></i> Lycée Limayrac — Toulouse</span>
+          <span><i class="fa-solid fa-users"></i> Projet AP — Client : M2L</span>
+        </div>
+        <p class="proof-context-text">
+          Dans le cadre d'un projet d'Atelier Professionnel, la <strong>Maison des Ligues de Lorraine (M2L)</strong> nous a demandé de mettre en place le service Internet pour ses utilisateurs, aussi bien sur les <strong>postes filaires</strong> que via le <strong>Wi-Fi</strong>. L'objectif était de fournir un accès réseau fiable et sécurisé à l'ensemble des utilisateurs du site.
+        </p>
+        <p class="proof-context-text">
+          La solution retenue repose sur une architecture avec <strong>deux routeurs en redondance</strong>, une ou plusieurs bornes Wi-Fi configurées, et un <strong>serveur DHCP</strong> sous Linux pour la distribution automatique des adresses IP. Cette architecture garantit la continuité du service Internet même en cas de défaillance d'un des routeurs.
+        </p>
+      </div>
+
+      <div class="proof-list-title">
+        <i class="fa-solid fa-folder-open"></i> Preuves — Mise en place des services réseau
+      </div>
+
+      <!-- Preuve 1 : Schéma réseau -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">01</div>
+          <div>
+            <div class="proof-item-title">Architecture réseau — Schéma de l'infrastructure</div>
+            <div class="proof-item-sub">Vue d'ensemble de la solution mise en place pour la M2L</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Le schéma ci-dessous représente l'architecture réseau déployée : deux routeurs en redondance assurant la connexion Internet, reliés aux bornes Wi-Fi et aux postes filaires via un switch central. Le serveur DHCP distribue automatiquement les adresses IP à l'ensemble des équipements du réseau.
+        </p>
+        <div class="proof-screenshots proof-screenshots--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="services/schema_reseau.png" alt="Schéma de l'architecture réseau M2L" />
+            <figcaption>Architecture réseau M2L — 2 routeurs en redondance, bornes Wi-Fi, serveur DHCP, postes filaires</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Preuve 2 : Routeurs -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">02</div>
+          <div>
+            <div class="proof-item-title">Configuration des routeurs — Redondance de service</div>
+            <div class="proof-item-sub">Deux routeurs configurés pour assurer la continuité du service Internet</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Pour garantir la <strong>continuité de service</strong>, deux routeurs ont été configurés en redondance. Si l'un tombe en panne, le second prend automatiquement le relais sans interruption pour les utilisateurs. Chaque routeur a été configuré avec ses interfaces, ses routes et ses règles de routage pour assurer une bascule transparente.
+        </p>
+        <div class="proof-screenshots proof-screenshots--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="services/routeur_config.png" alt="Configuration des routeurs" />
+            <figcaption>Configuration des routeurs — interfaces, routes et paramètres de redondance</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Preuve 3 : Borne Wi-Fi -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">03</div>
+          <div>
+            <div class="proof-item-title">Configuration des bornes Wi-Fi</div>
+            <div class="proof-item-sub">Paramétrage SSID, sécurité et adressage IP des bornes AT-TQ2403</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Les bornes Wi-Fi (AT-TQ2403) ont été configurées via leur interface web. La configuration inclut le nom du réseau (SSID), le type de sécurité (WPA2), le mot de passe, ainsi que l'adressage IP statique de la borne pour l'intégrer correctement dans le plan d'adressage du réseau M2L.
+        </p>
+        <div class="proof-screenshots proof-screenshots--2col">
+          <figure class="proof-fig">
+            <img src="services/borne_wifi_connexion.png" alt="Interface de connexion à la borne Wi-Fi" />
+            <figcaption>Interface de connexion à la borne Wi-Fi — accès à l'adresse 192.168.1.1</figcaption>
+          </figure>
+          <figure class="proof-fig">
+            <img src="services/borne_wifi_parametrage.png" alt="Paramétrage de la borne Wi-Fi" />
+            <figcaption>Paramétrage de la borne — SSID, sécurité WPA2, adressage IP</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Preuve 4 : DHCP -->
+      <div class="proof-item">
+        <div class="proof-item-header">
+          <div class="proof-item-num">04</div>
+          <div>
+            <div class="proof-item-title">Serveur DHCP — Distribution automatique des adresses IP</div>
+            <div class="proof-item-sub">Installation et configuration sous Linux — plage d'adresses pour postes et Wi-Fi</div>
+          </div>
+        </div>
+        <p class="proof-item-desc">
+          Un serveur DHCP a été installé et configuré sous Linux (Ubuntu) pour distribuer automatiquement les adresses IP aux postes filaires et aux équipements Wi-Fi. La configuration définit la plage d'adresses distribuées, le masque de sous-réseau, la passerelle par défaut et les serveurs DNS. Les utilisateurs n'ont ainsi aucune configuration réseau manuelle à effectuer.
+        </p>
+        <div class="proof-screenshots proof-screenshots--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="services/dhcp_config.png" alt="Configuration du serveur DHCP" />
+            <figcaption>Configuration du serveur DHCP — plage IP, masque, passerelle et DNS définis pour le réseau M2L</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+  </template>
+
+  <template id="tpl-developpement">
+
+    <!-- ===== PAGE 1 : DÉFINITION PLEIN ÉCRAN ===== -->
+    <div class="comp-fullscreen">
+      <div class="comp-fullscreen-bg"></div>
+      <div class="comp-fullscreen-content">
+        <div class="comp-fs-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h2 class="comp-fs-title">Développement professionnel</h2>
+        <p class="comp-fs-subtitle">Compétence BTS SIO – SISR</p>
+        <div class="comp-fs-definition">
+          <p>Le développement professionnel regroupe deux démarches complémentaires. D'un côté, l'<strong>approfondissement personnel</strong> — construire sa présence en ligne, se former sur des technologies réseau, et se renseigner sur des outils découverts en entreprise. De l'autre, la <strong>veille technologique</strong> — suivre activement les actualités IT et cybersécurité, et en garder une trace sous forme de mémos synthétiques.</p>
+          <p>Ces deux pratiques témoignent d'une <strong>autonomie, d'une curiosité</strong> et d'une volonté constante de progresser dans le domaine des réseaux et systèmes.</p>
+        </div>
+        <div class="comp-fs-tags">
+          <span><i class="fa-solid fa-user-tie"></i> Présence en ligne</span>
+          <span><i class="fa-solid fa-graduation-cap"></i> Formations</span>
+          <span><i class="fa-solid fa-book-open"></i> Nouvelles technologies</span>
+          <span><i class="fa-solid fa-newspaper"></i> Veille technologique</span>
+        </div>
+        <div class="comp-fs-scroll-hint">
+          <i class="fa-solid fa-chevron-down"></i>
+          <span>Voir les preuves</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 2 : CONTENU ===== -->
+    <div class="dev-split-wrapper">
+
+      <!-- ONGLETS -->
+      <div class="dev-tabs-bar">
+        <button class="dev-tab active" data-panel="dev">
+          <i class="fa-solid fa-book-open"></i> Développement professionnel
+        </button>
+        <button class="dev-tab" data-panel="veille">
+          <i class="fa-solid fa-newspaper"></i> Veille technologique
+        </button>
+      </div>
+
+      <div class="dev-panels">
+
+        <!-- PANNEAU GAUCHE : DEV PRO -->
+        <div class="dev-panel dev-panel--left active" id="dev-panel-dev">
+          <div class="dev-panel-inner">
+
+            <!-- CATÉGORIE 1 : PRÉSENCE EN LIGNE -->
+            <div class="dev-category">
+              <div class="dev-category-header">
+                <div class="dev-cat-icon" style="background:rgba(76,222,130,0.1);border-color:rgba(76,222,130,0.3);color:#4cde82;">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                  <div class="dev-cat-title">Présence en ligne</div>
+                  <div class="dev-cat-sub">Identité professionnelle sur le web</div>
+                </div>
+              </div>
+              <p class="dev-cat-desc">La création d'un profil LinkedIn professionnel permet de valoriser son parcours, ses expériences et ses compétences auprès de recruteurs et de professionnels du secteur IT. C'est un outil incontournable pour développer son réseau et assurer sa visibilité dans le domaine des réseaux et systèmes.</p>
+              <a class="dev-ext-btn" href="https://www.linkedin.com/in/clement-verschaeve-b038aa224/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> Voir mon profil LinkedIn
+              </a>
+            </div>
+
+            <div class="dev-cat-sep"></div>
+
+            <!-- CATÉGORIE 2 : FORMATIONS -->
+            <div class="dev-category">
+              <div class="dev-category-header">
+                <div class="dev-cat-icon" style="background:rgba(74,179,244,0.1);border-color:rgba(74,179,244,0.3);color:#4ab3f4;">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <div class="dev-cat-title">Formations</div>
+                  <div class="dev-cat-sub">Certification Cisco — NetAcademy</div>
+                </div>
+              </div>
+              <p class="dev-cat-desc">Je suis actuellement le parcours de certification Cisco sur la plateforme NetAcademy. Cette formation couvre les fondamentaux des réseaux informatiques : modèle OSI, protocoles TCP/IP, adressage IP, routage statique et dynamique (OSPF, EIGRP), commutation (VLANs, STP) et sécurité réseau de base.</p>
+              <a class="dev-ext-btn" href="https://www.netacad.com/fr/dashboard" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Accéder à NetAcademy
+              </a>
+            </div>
+
+            <div class="dev-cat-sep"></div>
+
+            <!-- CATÉGORIE 3 : NOUVELLES TECHNOLOGIES -->
+            <div class="dev-category">
+              <div class="dev-category-header">
+                <div class="dev-cat-icon" style="background:rgba(249,164,92,0.1);border-color:rgba(249,164,92,0.3);color:#f9a45c;">
+                  <i class="fa-solid fa-diagram-project"></i>
+                </div>
+                <div>
+                  <div class="dev-cat-title">Nouvelles technologies</div>
+                  <div class="dev-cat-sub">CloudVision (Arista) — Découvert en alternance chez Adista</div>
+                </div>
+              </div>
+              <p class="dev-cat-desc">Lors de mon alternance chez Adista, j'ai découvert <strong>CloudVision</strong>, la plateforme de gestion centralisée d'Arista. Pour en comprendre le fonctionnement, j'ai mené des recherches personnelles et rédigé un compte rendu. CloudVision permet d'administrer des switchs et routeurs Arista depuis une interface web unique, grâce à l'OS réseau EOS. Chaque équipement remonte en permanence son état, son trafic et ses événements. L'administrateur peut superviser le réseau, déployer des configurations automatiquement, sauvegarder les paramètres et détecter rapidement les anomalies grâce à la télémétrie temps réel.</p>
+              <div class="dev-tags">
+                <span>Arista</span><span>EOS</span><span>Télémétrie</span><span>Supervision réseau</span><span>Automatisation</span>
+              </div>
+              <a class="cdc-download-btn" href="veille/professionel/compte rendu cloudvision.docx" download style="margin-top:14px;">
+                <i class="fa-solid fa-download"></i> Télécharger le compte rendu
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PANNEAU DROIT : VEILLE -->
+        <div class="dev-panel dev-panel--right" id="dev-panel-veille">
+          <div class="dev-panel-inner">
+
+            <div class="proof-context-block" style="margin-bottom:24px;">
+              <div class="proof-context-badge"><i class="fa-solid fa-rss"></i> Source</div>
+              <p class="proof-context-text" style="margin-top:10px;">
+                Je réalise régulièrement une veille technologique via <strong>Flipboard</strong> et des sources spécialisées en cybersécurité. Pour chaque article pertinent, je rédige un mémo synthétique résumant le contexte, le fonctionnement technique et les mesures recommandées.
+              </p>
+            </div>
+
+            <!-- MÉMO 1 : Microsoft 365 -->
+            <div class="veille-memo">
+              <div class="veille-memo-header">
+                <div class="veille-memo-icon danger"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div>
+                  <div class="veille-memo-title">Attaque contre Microsoft 365 — Kali365</div>
+                  <div class="veille-memo-date"><i class="fa-solid fa-calendar-days"></i> Mai 2026 &nbsp;·&nbsp; Source : FBI / Microsoft</div>
+                </div>
+              </div>
+              <div class="veille-memo-tags">
+                <span>Microsoft 365</span><span>Phishing</span><span>OAuth 2.0</span><span>MFA bypass</span>
+              </div>
+              <div class="veille-memo-body">
+                <p><strong>Contexte :</strong> Le FBI alerte sur Kali365, un kit de phishing vendu via Telegram, ciblant les comptes Microsoft 365 (Outlook, Teams, OneDrive).</p>
+                <p><strong>Comment ça marche :</strong> L'attaque utilise le <em>Device Code Phishing</em>. La victime reçoit un faux mail imitant Microsoft et est invitée à saisir un code sur une vraie page Microsoft. Elle pense être en sécurité, mais valide en réalité l'accès à son compte — l'attaquant vole le jeton OAuth sans jamais connaître le mot de passe, contournant ainsi le MFA.</p>
+                <p><strong>Conséquences :</strong> Vol de données, usurpation d'identité, accès total à la messagerie et aux fichiers de l'entreprise.</p>
+                <p><strong>Mesures recommandées :</strong> Désactiver le Device Code Flow, mettre en place des politiques d'accès conditionnel, surveiller les connexions OAuth inhabituelles et sensibiliser les utilisateurs au phishing.</p>
+              </div>
+              <a class="cdc-download-btn" href="veille/veille/attaque contre Microsoft 365 et Outlook 26.05.2026.docx" download style="margin-top:12px;">
+                <i class="fa-solid fa-download"></i> Télécharger le mémo complet
+              </a>
+            </div>
+
+            <!-- MÉMO 2 : BCE & IA -->
+            <div class="veille-memo" style="margin-top:20px;">
+              <div class="veille-memo-header">
+                <div class="veille-memo-icon warning"><i class="fa-solid fa-brain"></i></div>
+                <div>
+                  <div class="veille-memo-title">La BCE alerte les banques face à l'IA Mythos</div>
+                  <div class="veille-memo-date"><i class="fa-solid fa-calendar-days"></i> Mai 2026 &nbsp;·&nbsp; Source : BCE / Anthropic</div>
+                </div>
+              </div>
+              <div class="veille-memo-tags">
+                <span>Intelligence artificielle</span><span>Zero-day</span><span>Banques</span><span>Cybersécurité</span>
+              </div>
+              <div class="veille-memo-body">
+                <p><strong>Contexte :</strong> La Banque Centrale Européenne convoque plusieurs banques européennes pour les alerter sur Mythos, une IA spécialisée en cybersécurité développée par Anthropic.</p>
+                <p><strong>Ce qu'est Mythos :</strong> Contrairement aux IA conversationnelles classiques, Mythos est capable d'analyser du code, détecter des vulnérabilités critiques, identifier des failles <em>zero-day</em> et automatiser des recherches de sécurité. Anthropic affirme qu'elle aurait découvert plusieurs milliers de failles dans des OS, navigateurs et infrastructures critiques.</p>
+                <p><strong>Pourquoi c'est inquiétant :</strong> Ces mêmes capacités pourraient être utilisées par des cybercriminels — une vulnérabilité pourrait être identifiée et exploitée en quelques minutes. La BCE craint que les banques européennes soient désavantagées face aux banques américaines ayant déjà accès à Mythos.</p>
+                <p><strong>Mesures recommandées :</strong> Accélérer les mises à jour de sécurité, renforcer la surveillance réseau, améliorer la détection d'intrusion et préparer des plans de continuité adaptés aux menaces IA.</p>
+              </div>
+              <a class="cdc-download-btn" href="veille/veille/La BCE alerte les banques 26.05.docx" download style="margin-top:12px;">
+                <i class="fa-solid fa-download"></i> Télécharger le mémo complet
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /dev-panels -->
+    </div><!-- /dev-split-wrapper -->
+
+    <script>
+    (function() {
+      function initDevPanels() {
+        const tabs = document.querySelectorAll('.dev-tab');
+        const panels = document.querySelectorAll('.dev-panel');
+        if (!tabs.length) return;
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            const target = tab.dataset.panel;
+            const isActive = tab.classList.contains('active');
+            if (isActive) {
+              tabs.forEach(t => t.classList.remove('active','expanded','collapsed'));
+              panels.forEach(p => p.classList.remove('expanded','collapsed'));
+              return;
+            }
+            tabs.forEach(t => {
+              t.classList.remove('active','expanded','collapsed');
+              t.classList.add(t.dataset.panel === target ? 'active' : 'collapsed');
+            });
+            panels.forEach(p => {
+              const side = p.id === 'dev-panel-' + target ? 'expanded' : 'collapsed';
+              p.classList.remove('expanded','collapsed','active');
+              p.classList.add(side);
+              if (side === 'expanded') p.classList.add('active');
+            });
+          });
+        });
+      }
+      const observer = new MutationObserver(() => {
+        if (document.querySelector('.dev-tab')) { initDevPanels(); observer.disconnect(); }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    })();
+    </script>
+
+  </template>
+
+  <template id="tpl-competences">
+    <section class="page-content">
+      <h2 class="page-title"><i class="fa-solid fa-comments"></i> Tableau de compétences</h2>
+      <p class="page-intro">Ce tableau présente les missions et expériences réalisées, et indique pour chacune les compétences du BTS SIO SISR qu'elles ont permis de valider. Cliquez sur une mission pour accéder aux preuves associées.</p>
+
+      <div class="legend">
+        <span class="check-yes"><i class="fa-solid fa-circle-check"></i></span> Compétence validée &nbsp;&nbsp;
+        <span class="check-no"><i class="fa-regular fa-circle"></i></span> Non concernée &nbsp;&nbsp;
+        <span style="color:#4ab3f4;font-size:0.8rem;"><i class="fa-solid fa-arrow-up-right-from-square"></i></span> Cliquable
+      </div>
+
+      <div class="table-wrapper">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th class="col-mission">Mission / Expérience</th>
+              <th class="col-comp" title="Gérer le patrimoine informatique">
+                <i class="fa-solid fa-server"></i>
+                <span>Patrimoine<br>informatique</span>
+              </th>
+              <th class="col-comp" title="Répondre aux incidents et demandes d'assistance">
+                <i class="fa-solid fa-headset"></i>
+                <span>Support<br>utilisateur</span>
+              </th>
+              <th class="col-comp" title="Développer la présence en ligne de l'organisation">
+                <i class="fa-solid fa-globe"></i>
+                <span>Présence<br>en ligne</span>
+              </th>
+              <th class="col-comp" title="Travailler en mode projet">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>Mode<br>projet</span>
+              </th>
+              <th class="col-comp" title="Mettre à disposition des utilisateurs un service informatique">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>Services<br>informatiques</span>
+              </th>
+              <th class="col-comp" title="Organiser son développement professionnel">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Développement<br>pro</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- SECTION : EN FORMATION -->
+            <tr class="section-row">
+              <td colspan="7"><i class="fa-solid fa-school"></i> Réalisations en cours de formation</td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="window.open('https://www.linkedin.com/in/clement-verschaeve-b038aa224/','_blank')">
+                <div class="mission-link"><strong>Création d'un profil LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Mise en place d'une identité professionnelle en ligne : création et optimisation du profil LinkedIn pour valoriser le parcours et développer son réseau professionnel.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="window.open('https://www.netacad.com/fr/dashboard','_blank')">
+                <div class="mission-link"><strong>Certification Cisco – NetAcademy <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Suivi du parcours de certification Cisco sur la plateforme NetAcademy : apprentissage des réseaux, protocoles TCP/IP, routage et commutation.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="navigate('presence')">
+                <div class="mission-link"><strong>Maison des Ligues – Site internet (AP) <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Création en groupe d'un site internet pour un organisme réel dans le cadre d'un atelier professionnel. Conception, développement et mise en ligne du site.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="navigate('support')">
+                <div class="mission-link"><strong>Mission GLPI (AP) <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Installation et configuration d'un serveur GLPI : création d'utilisateurs, inventaire des équipements réseau et simulation de tickets d'incidents.</p></div>
+              </td>
+              <td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="openPopup('velanne')">
+                <div class="mission-link"><strong>Mission Velanne Datasec <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Création d'une infrastructure réseau avec VLAN, serveur FTP, routage inter-VLAN et ACL pour filtrer les échanges entre réseaux.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="navigate('services')">
+                <div class="mission-link"><strong>Mission Kiwi <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Création d'un réseau avec accès Internet et Wi-Fi, intégrant une redondance de routeur pour assurer la continuité de service.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="openPopup('websecure')">
+                <div class="mission-link"><strong>Mission WEB-Secure <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Déploiement d'une infrastructure complète : serveur Web Apache, DNS primaire et secondaire, Active Directory, GPO et supervision Nagios.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td>
+            </tr>
+
+            <!-- SECTION : STAGE 2ÈME ANNÉE BTS -->
+            <tr class="section-row">
+              <td colspan="7"><i class="fa-solid fa-briefcase"></i> Réalisations en milieu professionnel – Stage 2ème année BTS (ENSIACET, Toulouse)</td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="openPopup('mdt')">
+                <div class="mission-link"><strong>Installation MDT <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Mise en place de Microsoft Deployment Toolkit pour automatiser le déploiement de postes Windows avec nom, logiciels et configuration réseau pré-installés.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="openPopup('clientleger')">
+                <div class="mission-link"><strong>Projet client léger <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Étude et déploiement d'une solution client léger basée sur Citrix + FOG Server pour simplifier la gestion des postes et logiciels scientifiques de l'ENSIACET.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+
+            <!-- SECTION : STAGE 1ÈRE ANNÉE BTS -->
+            <tr class="section-row">
+              <td colspan="7"><i class="fa-solid fa-briefcase"></i> Réalisations en milieu professionnel – Stage 1ère année BTS (Semitour, Lascaux IV)</td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="navigate('patrimoine')">
+                <div class="mission-link"><strong>Inventaire et interconnexion réseau – NetBox <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Inventorisation des équipements réseau de la structure avec NetBox et mise en place des interconnexions entre les différents équipements du parc informatique.</p></div>
+              </td>
+              <td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+
+            <!-- SECTION : ALTERNANCE BUT R&T -->
+            <tr class="section-row">
+              <td colspan="7"><i class="fa-solid fa-briefcase"></i> Réalisations en milieu professionnel – Alternance BUT R&amp;T (IUT Annecy)</td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="navigate('support')">
+                <div class="mission-link"><strong>Ticketing &amp; support utilisateur – GLPI <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Prise en charge des demandes d'assistance des utilisateurs via GLPI : étudiants, enseignants et administration. Diagnostic, résolution et suivi des tickets.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td>
+            </tr>
+
+            <!-- SECTION : STAGE TERMINALE -->
+            <tr class="section-row">
+              <td colspan="7"><i class="fa-solid fa-briefcase"></i> Réalisations en milieu professionnel – Stage Terminale Bac Pro (DGNSI, Canton de Vaud, Suisse)</td>
+            </tr>
+            <tr>
+              <td class="cell-mission cell-clickable" onclick="navigate('projet')">
+                <div class="mission-link"><strong>Déplacement d'équipements – Data Center DGNSI <i class="fa-solid fa-arrow-up-right-from-square"></i></strong><p>Projet de déplacement de trois équipements réseau d'une salle à l'autre du data center cantonal vaudois : repérage, préparation, coordination avec les utilisateurs et intervention sur site.</p></div>
+              </td>
+              <td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td><td class="cell-check no"><i class="fa-regular fa-circle"></i></td><td class="cell-check yes"><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- POPUPS -->
+    <div id="tableau-overlay" class="tableau-overlay" onclick="closePopup()"></div>
+
+    <div class="tableau-popup" id="popup-velanne">
+      <button class="popup-close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="popup-header">
+        <div class="popup-icon" style="background:rgba(76,222,130,0.1);border-color:rgba(76,222,130,0.3);color:#4cde82;"><i class="fa-solid fa-network-wired"></i></div>
+        <div>
+          <div class="popup-title">Mission Velanne Datasec</div>
+          <div class="popup-sub">Infrastructure réseau — VLAN, routage inter-VLAN, ACL, serveur FTP</div>
+        </div>
+      </div>
+      <div class="popup-body">
+        <p class="popup-desc">Création d'une infrastructure réseau complète pour la société fictive Velanne Datasec : segmentation en VLANs, routage inter-VLAN, mise en place d'ACL pour filtrer les échanges entre réseaux, et déploiement d'un serveur FTP pour le partage de fichiers.</p>
+        <div class="popup-imgs popup-imgs--2col">
+          <figure class="proof-fig">
+            <img src="tableau/velanne_schema.png" alt="Schéma réseau Velanne" />
+            <figcaption>Schéma de l'infrastructure réseau Velanne Datasec</figcaption>
+          </figure>
+          <figure class="proof-fig">
+            <img src="tableau/velanne_vlan.png" alt="Configuration VLAN switch" />
+            <figcaption>Configuration des VLANs sur le switch</figcaption>
+          </figure>
+        </div>
+        <div class="popup-imgs" style="margin-top:14px;">
+          <figure class="proof-fig proof-fig--large">
+            <img src="tableau/velanne_ftp.png" alt="Serveur FTP" />
+            <figcaption>Serveur FTP déployé — accès aux dossiers partagés par VLAN</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="tableau-popup" id="popup-websecure">
+      <button class="popup-close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="popup-header">
+        <div class="popup-icon" style="background:rgba(232,97,42,0.1);border-color:rgba(232,97,42,0.3);color:#e8612a;"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <div class="popup-title">Mission WEB-Secure</div>
+          <div class="popup-sub">Serveur Web Apache, DNS primaire & secondaire, Active Directory, Supervision Nagios, GPO</div>
+        </div>
+      </div>
+      <div class="popup-body">
+        <p class="popup-desc">Déploiement d'une infrastructure complète pour la M2L (Maison des Ligues de Lorraine) : serveur Web Apache sous Linux, deux serveurs DNS Windows Server (primaire et secondaire avec transfert de zone), Active Directory avec GPO (fond d'écran, partage de dossiers, restriction CMD), et supervision Nagios pour monitorer l'ensemble des services en temps réel.</p>
+
+        <div class="popup-tags" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(33,118,184,0.1);border:1px solid rgba(33,118,184,0.25);color:#4a7a9a;">Apache2 (Linux)</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(33,118,184,0.1);border:1px solid rgba(33,118,184,0.25);color:#4a7a9a;">DNS Windows Server</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(33,118,184,0.1);border:1px solid rgba(33,118,184,0.25);color:#4a7a9a;">Active Directory</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(33,118,184,0.1);border:1px solid rgba(33,118,184,0.25);color:#4a7a9a;">Nagios</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(33,118,184,0.1);border:1px solid rgba(33,118,184,0.25);color:#4a7a9a;">GPO</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(33,118,184,0.1);border:1px solid rgba(33,118,184,0.25);color:#4a7a9a;">UFW / Pare-feu</span>
+        </div>
+
+        <div class="popup-imgs popup-imgs--2col">
+          <figure class="proof-fig">
+            <img src="tableau/websecure_schema.png" alt="Schéma WEB-Secure" />
+            <figcaption>Architecture complète de l'infrastructure WEB-Secure</figcaption>
+          </figure>
+          <figure class="proof-fig">
+            <img src="tableau/websecure_apache.png" alt="Serveur Apache opérationnel" />
+            <figcaption>Serveur Apache actif — site M2L accessible depuis le réseau</figcaption>
+          </figure>
+        </div>
+        <div class="popup-imgs popup-imgs--2col" style="margin-top:14px;">
+          <figure class="proof-fig">
+            <img src="tableau/websecure_dns.png" alt="DNS Windows Server" />
+            <figcaption>DNS primaire Windows Server — zone lorraine-sport.net configurée</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="tableau-popup" id="popup-mdt">
+      <button class="popup-close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="popup-header">
+        <div class="popup-icon" style="background:rgba(74,179,244,0.1);border-color:rgba(74,179,244,0.3);color:#4ab3f4;"><i class="fa-solid fa-desktop"></i></div>
+        <div>
+          <div class="popup-title">Installation MDT — ENSIACET</div>
+          <div class="popup-sub">Microsoft Deployment Toolkit — Déploiement automatisé de postes Windows</div>
+        </div>
+      </div>
+      <div class="popup-body">
+        <p class="popup-desc">
+          Dans le cadre de mon stage à l'ENSIACET, j'ai participé au déploiement de nouveaux postes informatiques via <strong>MDT (Microsoft Deployment Toolkit)</strong>. Cet outil permet d'installer une image Windows standardisée sur des postes de manière automatisée, en incluant dès le départ les logiciels essentiels (Office 365, HP Support Assistant) et en attribuant automatiquement un nom conforme à la charte informatique du service.
+        </p>
+        <p class="popup-desc">
+          Une fois le déploiement terminé, chaque poste est finalisé : mise à jour Windows, configuration réseau avec affectation VLAN selon le service ou laboratoire du demandeur, et réservation DHCP pour garantir une adresse IP fixe.
+        </p>
+
+        <div class="popup-tags" style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;">
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(74,179,244,0.08);border:1px solid rgba(74,179,244,0.2);color:#4a7a9a;">MDT</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(74,179,244,0.08);border:1px solid rgba(74,179,244,0.2);color:#4a7a9a;">WDS</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(74,179,244,0.08);border:1px solid rgba(74,179,244,0.2);color:#4a7a9a;">Windows Image</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(74,179,244,0.08);border:1px solid rgba(74,179,244,0.2);color:#4a7a9a;">DHCP</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(74,179,244,0.08);border:1px solid rgba(74,179,244,0.2);color:#4a7a9a;">VLAN</span>
+        </div>
+
+        <div class="popup-imgs popup-imgs--full">
+          <figure class="proof-fig proof-fig--large">
+            <img src="tableau/mdt_schema.png" alt="Schéma MDT + WDS" />
+            <figcaption>Architecture MDT + WDS — un poste source envoie son image au serveur MDT qui la redistribue via WDS sur les postes cibles</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="tableau-popup" id="popup-clientleger">
+      <button class="popup-close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="popup-header">
+        <div class="popup-icon" style="background:rgba(249,164,92,0.1);border-color:rgba(249,164,92,0.3);color:#f9a45c;"><i class="fa-solid fa-display"></i></div>
+        <div>
+          <div class="popup-title">Projet Client léger — ENSIACET</div>
+          <div class="popup-sub">Citrix Virtual Apps + FOG Server — Simplification de la gestion des postes</div>
+        </div>
+      </div>
+      <div class="popup-body">
+        <p class="popup-desc">
+          L'ENSIACET dispose d'un grand nombre de logiciels scientifiques variés. Chaque mise à jour nécessitait de recréer une image et de la redéployer sur tous les postes — une tâche lourde. La solution retenue repose sur <strong>Citrix Virtual Apps</strong> : les applications sont hébergées sur un serveur central et accessibles à distance depuis des postes légers, sans rien installer localement.
+        </p>
+        <div class="popup-tags" style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;">
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(249,164,92,0.08);border:1px solid rgba(249,164,92,0.2);color:#8a7a4a;">Citrix</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(249,164,92,0.08);border:1px solid rgba(249,164,92,0.2);color:#8a7a4a;">FOG Server</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(249,164,92,0.08);border:1px solid rgba(249,164,92,0.2);color:#8a7a4a;">PXE Boot</span>
+          <span style="font-size:0.7rem;padding:4px 10px;border-radius:20px;background:rgba(249,164,92,0.08);border:1px solid rgba(249,164,92,0.2);color:#8a7a4a;">Active Directory</span>
+        </div>
+        <div class="popup-imgs">
+          <figure class="proof-fig proof-fig--large">
+            <img src="tableau/clientleger_schema.png" alt="Schéma architecture client léger" />
+            <figcaption>Architecture client léger — postes légers connectés au serveur Citrix qui héberge toutes les applications</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function openPopup(id) {
+      document.getElementById('tableau-overlay').classList.add('show');
+      document.getElementById('popup-' + id).classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePopup() {
+      document.querySelectorAll('.tableau-popup.show').forEach(p => p.classList.remove('show'));
+      document.getElementById('tableau-overlay').classList.remove('show');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
+    </script>
+  </template>
+
+  <script>
+    const pages = ['accueil','patrimoine','support','presence','projet','services','developpement','competences'];
+
+    function navigate(pageId) {
+      if (!pages.includes(pageId)) pageId = 'accueil';
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.page === pageId);
+      });
+      const tpl = document.getElementById('tpl-' + pageId);
+      const app = document.getElementById('app');
+      app.innerHTML = '';
+      if (tpl) app.appendChild(tpl.content.cloneNode(true));
+      history.replaceState(null, '', '#' + pageId);
+      window.scrollTo(0, 0);
+
+      // Cartes expandables : clic pour agrandir / réduire
+      app.querySelectorAll('.resume-card.expandable').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('expanded');
+        });
+      });
+
+      // Lightbox : clic sur image pour agrandir
+      app.querySelectorAll('.proof-fig img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+          const caption = img.closest('figure')?.querySelector('figcaption')?.textContent || '';
+          const overlay = document.createElement('div');
+          overlay.className = 'lightbox-overlay';
+          overlay.innerHTML = `
+            <div class="lightbox-inner">
+              <img src="${img.src}" alt="${img.alt}" />
+              <div class="lightbox-caption">${caption}</div>
+              <button class="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          `;
+          document.body.appendChild(overlay);
+          requestAnimationFrame(() => overlay.classList.add('lightbox-visible'));
+          const close = () => {
+            overlay.classList.remove('lightbox-visible');
+            overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
+          };
+          overlay.querySelector('.lightbox-close').addEventListener('click', close);
+          overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+          document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); }, { once: true });
+        });
+      });
+    }
+
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        navigate(btn.dataset.page);
+      });
+    });
+
+    const hash = location.hash.replace('#', '');
+    navigate(pages.includes(hash) ? hash : 'accueil');
+  </script>
+
+</body>
+</html>
