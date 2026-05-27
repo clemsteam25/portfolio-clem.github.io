@@ -1662,6 +1662,54 @@ tbody td { padding: 11px 16px; color: #cdd8e8; }
 }
 
 /* =============================
+   VEILLE STEPS
+   ============================= */
+.veille-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.veille-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid #1a3050;
+  position: relative;
+}
+
+.veille-step:last-child { border-bottom: none; }
+
+.veille-step-num {
+  font-family: 'Courier New', monospace;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: rgba(33,118,184,0.2);
+  min-width: 36px;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.veille-step-content { flex: 1; }
+
+.veille-step-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4ab3f4;
+  margin-bottom: 5px;
+}
+
+.veille-step-desc {
+  font-size: 0.78rem;
+  color: #5a7a9a;
+  line-height: 1.7;
+}
+
+.veille-step-desc strong { color: #8ab8d8; }
+
+/* =============================
    VEILLE MEMOS
    ============================= */
 .veille-memo {

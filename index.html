@@ -1242,12 +1242,46 @@
         <div class="dev-panel dev-panel--right" id="dev-panel-veille">
           <div class="dev-panel-inner">
 
-            <div class="proof-context-block" style="margin-bottom:24px;">
-              <div class="proof-context-badge"><i class="fa-solid fa-rss"></i> Source</div>
-              <p class="proof-context-text" style="margin-top:10px;">
-                Je réalise régulièrement une veille technologique via <strong>Flipboard</strong> et des sources spécialisées en cybersécurité. Pour chaque article pertinent, je rédige un mémo synthétique résumant le contexte, le fonctionnement technique et les mesures recommandées.
-              </p>
+            <!-- 5 ÉTAPES DE LA VEILLE -->
+            <div class="veille-steps">
+              <div class="veille-step">
+                <div class="veille-step-num">01</div>
+                <div class="veille-step-content">
+                  <div class="veille-step-title">Choisir un thème</div>
+                  <div class="veille-step-desc">Ma veille est centrée sur deux domaines : la <strong>configuration d'équipements réseau</strong> (switchs, routeurs, infrastructures) et la <strong>cybersécurité</strong> (nouvelles menaces, vulnérabilités, bonnes pratiques).</div>
+                </div>
+              </div>
+              <div class="veille-step">
+                <div class="veille-step-num">02</div>
+                <div class="veille-step-content">
+                  <div class="veille-step-title">Sources</div>
+                  <div class="veille-step-desc">J'utilise principalement <strong>Flipboard</strong> pour agréger des articles issus de sources spécialisées : alertes du FBI, bulletins Microsoft, publications d'Anthropic, et médias IT francophones et anglophones.</div>
+                </div>
+              </div>
+              <div class="veille-step">
+                <div class="veille-step-num">03</div>
+                <div class="veille-step-content">
+                  <div class="veille-step-title">Collecte d'informations</div>
+                  <div class="veille-step-desc">Je sélectionne les articles pertinents selon mes thèmes et je note les informations clés : contexte, fonctionnement technique, acteurs impliqués, impact potentiel.</div>
+                </div>
+              </div>
+              <div class="veille-step">
+                <div class="veille-step-num">04</div>
+                <div class="veille-step-content">
+                  <div class="veille-step-title">Analyse de l'information</div>
+                  <div class="veille-step-desc">Je structure et reformule les informations pour en comprendre les enjeux techniques et les risques associés. Je les compare avec mes connaissances existantes pour en mesurer l'impact réel.</div>
+                </div>
+              </div>
+              <div class="veille-step">
+                <div class="veille-step-num">05</div>
+                <div class="veille-step-content">
+                  <div class="veille-step-title">Diffusion</div>
+                  <div class="veille-step-desc">Je rédige un <strong>mémo synthétique</strong> structuré en plusieurs points clés (contexte, fonctionnement, conséquences, mesures recommandées), intégré à ce portfolio et téléchargeable.</div>
+                </div>
+              </div>
             </div>
+
+            <div class="dev-cat-sep" style="margin:24px 0;"></div>
 
             <!-- MÉMO 1 : Microsoft 365 -->
             <div class="veille-memo">
@@ -1263,17 +1297,17 @@
               </div>
               <div class="veille-memo-body">
                 <p><strong>Contexte :</strong> Le FBI alerte sur Kali365, un kit de phishing vendu via Telegram, ciblant les comptes Microsoft 365 (Outlook, Teams, OneDrive).</p>
-                <p><strong>Comment ça marche :</strong> L'attaque utilise le <em>Device Code Phishing</em>. La victime reçoit un faux mail imitant Microsoft et est invitée à saisir un code sur une vraie page Microsoft. Elle pense être en sécurité, mais valide en réalité l'accès à son compte — l'attaquant vole le jeton OAuth sans jamais connaître le mot de passe, contournant ainsi le MFA.</p>
+                <p><strong>Comment ça marche :</strong> L'attaque utilise le <em>Device Code Phishing</em>. La victime reçoit un faux mail imitant Microsoft et est invitée à saisir un code sur une vraie page Microsoft. Elle valide en réalité l'accès à son compte — l'attaquant vole le jeton OAuth sans jamais connaître le mot de passe, contournant ainsi le MFA.</p>
                 <p><strong>Conséquences :</strong> Vol de données, usurpation d'identité, accès total à la messagerie et aux fichiers de l'entreprise.</p>
-                <p><strong>Mesures recommandées :</strong> Désactiver le Device Code Flow, mettre en place des politiques d'accès conditionnel, surveiller les connexions OAuth inhabituelles et sensibiliser les utilisateurs au phishing.</p>
+                <p><strong>Mesures recommandées :</strong> Désactiver le Device Code Flow, mettre en place des politiques d'accès conditionnel, surveiller les connexions OAuth inhabituelles.</p>
               </div>
-              <a class="cdc-download-btn" href="veille/veille/attaque contre Microsoft 365 et Outlook 26.05.2026.docx" download style="margin-top:12px;">
+              <a class="cdc-download-btn" href="veille/veille/attaque contre Microsoft 365 et Outlook 26.05.2026.docx" download style="margin:0 18px 16px;">
                 <i class="fa-solid fa-download"></i> Télécharger le mémo complet
               </a>
             </div>
 
             <!-- MÉMO 2 : BCE & IA -->
-            <div class="veille-memo" style="margin-top:20px;">
+            <div class="veille-memo" style="margin-top:16px;">
               <div class="veille-memo-header">
                 <div class="veille-memo-icon warning"><i class="fa-solid fa-brain"></i></div>
                 <div>
@@ -1285,12 +1319,12 @@
                 <span>Intelligence artificielle</span><span>Zero-day</span><span>Banques</span><span>Cybersécurité</span>
               </div>
               <div class="veille-memo-body">
-                <p><strong>Contexte :</strong> La Banque Centrale Européenne convoque plusieurs banques européennes pour les alerter sur Mythos, une IA spécialisée en cybersécurité développée par Anthropic.</p>
-                <p><strong>Ce qu'est Mythos :</strong> Contrairement aux IA conversationnelles classiques, Mythos est capable d'analyser du code, détecter des vulnérabilités critiques, identifier des failles <em>zero-day</em> et automatiser des recherches de sécurité. Anthropic affirme qu'elle aurait découvert plusieurs milliers de failles dans des OS, navigateurs et infrastructures critiques.</p>
-                <p><strong>Pourquoi c'est inquiétant :</strong> Ces mêmes capacités pourraient être utilisées par des cybercriminels — une vulnérabilité pourrait être identifiée et exploitée en quelques minutes. La BCE craint que les banques européennes soient désavantagées face aux banques américaines ayant déjà accès à Mythos.</p>
-                <p><strong>Mesures recommandées :</strong> Accélérer les mises à jour de sécurité, renforcer la surveillance réseau, améliorer la détection d'intrusion et préparer des plans de continuité adaptés aux menaces IA.</p>
+                <p><strong>Contexte :</strong> La BCE convoque plusieurs banques européennes pour les alerter sur Mythos, une IA spécialisée en cybersécurité développée par Anthropic.</p>
+                <p><strong>Ce qu'est Mythos :</strong> Capable d'analyser du code, détecter des vulnérabilités critiques et identifier des failles <em>zero-day</em>. Plusieurs milliers de failles découvertes dans des OS, navigateurs et infrastructures critiques.</p>
+                <p><strong>Pourquoi c'est inquiétant :</strong> Ces capacités pourraient être utilisées par des cybercriminels — une vulnérabilité pourrait être identifiée et exploitée en quelques minutes.</p>
+                <p><strong>Mesures recommandées :</strong> Accélérer les mises à jour, renforcer la surveillance réseau, préparer des plans de continuité adaptés aux menaces IA.</p>
               </div>
-              <a class="cdc-download-btn" href="veille/veille/La BCE alerte les banques 26.05.docx" download style="margin-top:12px;">
+              <a class="cdc-download-btn" href="veille/veille/La BCE alerte les banques 26.05.docx" download style="margin:0 18px 16px;">
                 <i class="fa-solid fa-download"></i> Télécharger le mémo complet
               </a>
             </div>
@@ -1298,43 +1332,6 @@
           </div>
         </div>
 
-      </div><!-- /dev-panels -->
-    </div><!-- /dev-split-wrapper -->
-
-    <script>
-    (function() {
-      function initDevPanels() {
-        const tabs = document.querySelectorAll('.dev-tab');
-        const panels = document.querySelectorAll('.dev-panel');
-        if (!tabs.length) return;
-        tabs.forEach(tab => {
-          tab.addEventListener('click', () => {
-            const target = tab.dataset.panel;
-            const isActive = tab.classList.contains('active');
-            if (isActive) {
-              tabs.forEach(t => t.classList.remove('active','expanded','collapsed'));
-              panels.forEach(p => p.classList.remove('expanded','collapsed'));
-              return;
-            }
-            tabs.forEach(t => {
-              t.classList.remove('active','expanded','collapsed');
-              t.classList.add(t.dataset.panel === target ? 'active' : 'collapsed');
-            });
-            panels.forEach(p => {
-              const side = p.id === 'dev-panel-' + target ? 'expanded' : 'collapsed';
-              p.classList.remove('expanded','collapsed','active');
-              p.classList.add(side);
-              if (side === 'expanded') p.classList.add('active');
-            });
-          });
-        });
-      }
-      const observer = new MutationObserver(() => {
-        if (document.querySelector('.dev-tab')) { initDevPanels(); observer.disconnect(); }
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    })();
-    </script>
 
   </template>
 
