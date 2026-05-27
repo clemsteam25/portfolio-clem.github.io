@@ -1332,6 +1332,8 @@
           </div>
         </div>
 
+      </div><!-- /dev-panels -->
+    </div><!-- /dev-split-wrapper -->
 
   </template>
 
@@ -1678,6 +1680,33 @@
           document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); }, { once: true });
         });
       });
+
+      // Onglets développement professionnel
+      const devTabs = app.querySelectorAll('.dev-tab');
+      const devPanels = app.querySelectorAll('.dev-panel');
+      if (devTabs.length) {
+        devTabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            const target = tab.dataset.panel;
+            const isActive = tab.classList.contains('active');
+            if (isActive) {
+              devTabs.forEach(t => t.classList.remove('active','expanded','collapsed'));
+              devPanels.forEach(p => p.classList.remove('expanded','collapsed'));
+              return;
+            }
+            devTabs.forEach(t => {
+              t.classList.remove('active','expanded','collapsed');
+              t.classList.add(t.dataset.panel === target ? 'active' : 'collapsed');
+            });
+            devPanels.forEach(p => {
+              const side = p.id === 'dev-panel-' + target ? 'expanded' : 'collapsed';
+              p.classList.remove('expanded','collapsed','active');
+              p.classList.add(side);
+              if (side === 'expanded') p.classList.add('active');
+            });
+          });
+        });
+      }
     }
 
     document.querySelectorAll('.nav-btn').forEach(btn => {
